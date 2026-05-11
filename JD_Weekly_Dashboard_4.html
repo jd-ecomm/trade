@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JD Sports Canada · Weekly eCommerce Report · Apr 19–25, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0a0a0a;--panel:#141414;--panel-2:#0f0f0f;--border:#262626;--yellow:#FFE000;--yellow-dim:#fbbf24;--green:#4ade80;--red:#f87171;--blue:#60a5fa;--pink:#f472b6;--grey:#71717a;--grey-2:#a1a1aa;--text:#e4e4e7;--text-strong:#fff;}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.container{max-width:1480px;margin:0 auto;padding:24px 32px 64px}
+.header{border-bottom:2px solid var(--yellow);padding-bottom:22px;margin-bottom:22px}
+.header-row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px}
+.brand-tag{display:inline-block;background:var(--yellow);color:#000;padding:4px 10px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;letter-spacing:.15em}
+.report-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;color:var(--grey);letter-spacing:.1em;text-transform:uppercase;margin-left:12px}
+h1{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:800;color:var(--text-strong);margin:6px 0 8px;letter-spacing:-.01em;line-height:1}
+.subtitle{font-size:13px;color:var(--grey-2)}
+.headline{text-align:right}.headline-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:var(--grey);letter-spacing:.1em}
+.headline-value{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;color:var(--yellow)}
+.tabs{display:flex;gap:4px;margin-bottom:24px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.tab{background:transparent;color:var(--grey-2);border:none;border-bottom:2px solid transparent;padding:12px 20px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;cursor:pointer;text-transform:uppercase;transition:all .15s}
+.tab:hover{color:var(--text)}.tab.active{background:var(--panel);color:var(--yellow);border-bottom-color:var(--yellow)}
+.tab-content{display:none}.tab-content.active{display:block}
+.section-header{margin-top:36px;margin-bottom:16px;border-bottom:1px solid var(--border);padding-bottom:12px}
+.section-header-row{display:flex;align-items:baseline;gap:14px}
+.section-num{font-family:'Barlow Condensed',sans-serif;font-size:14px;color:var(--yellow);font-weight:700;letter-spacing:.15em}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:var(--text-strong);margin:0;text-transform:uppercase;letter-spacing:.02em}
+.section-sub{font-size:13px;color:var(--grey-2);margin-top:6px;margin-left:38px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.kpi-card{background:var(--panel);border:1px solid var(--border);padding:18px 18px 16px;border-radius:4px;position:relative;overflow:hidden}
+.kpi-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--yellow)}
+.kpi-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;color:var(--grey-2);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;font-weight:600}
+.kpi-value{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:700;color:var(--text-strong);letter-spacing:-.01em;line-height:1.1}
+.kpi-deltas{display:flex;gap:14px;margin-top:10px;font-size:12px}
+.kpi-target{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:var(--grey);letter-spacing:.05em;margin-top:6px;padding-top:6px;border-top:1px dashed var(--border);text-transform:uppercase;min-height:14px}
+.delta-label{color:var(--grey);text-transform:uppercase;letter-spacing:.06em;font-size:10px;margin-right:4px}
+.delta{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px}
+.delta.up{color:var(--green)}.delta.down{color:var(--red)}.delta.neutral{color:var(--grey)}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:20px}
+.panel-title{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--text-strong);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid-1-3-1{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+.grid-1-5-1{display:grid;grid-template-columns:1.5fr 1fr;gap:16px}
+.stack{display:grid;grid-template-columns:1fr;gap:16px}
+.chart-wrap{position:relative;width:100%}
+.chart-wrap.h-240{height:240px}.chart-wrap.h-260{height:260px}.chart-wrap.h-280{height:280px}.chart-wrap.h-300{height:300px}.chart-wrap.h-320{height:320px}.chart-wrap.h-380{height:380px}.chart-wrap.h-420{height:420px}
+.funnel-row{display:flex;gap:8px;flex-wrap:wrap}
+.funnel-card{flex:1;min-width:200px;background:var(--panel-2);border:1px solid var(--border);padding:16px;border-radius:4px}
+.funnel-card-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;color:var(--grey-2);text-transform:uppercase;letter-spacing:.1em}
+.funnel-card-val{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;color:var(--text-strong);margin:4px 0}
+.funnel-card-sub{font-size:11px;color:var(--grey)}
+.dropoff{margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+.dropoff-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;color:var(--yellow);letter-spacing:.1em}
+.dropoff-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--text-strong)}
+.dropoff-sub{font-size:11px;color:var(--grey)}
+.compare-box{padding:18px;background:var(--panel-2);border:1px solid var(--border);border-radius:4px;border-left:3px solid}
+.compare-box.pre{border-left-color:var(--blue)}.compare-box.post{border-left-color:var(--red)}.compare-box.now{border-left-color:var(--yellow)}
+.compare-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:var(--grey-2);letter-spacing:.1em;text-transform:uppercase}
+.compare-value{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:700;color:var(--text-strong);margin-top:6px}
+.compare-value.yellow{color:var(--yellow)}
+.compare-sub{font-size:12px;color:var(--grey)}
+.tbl{width:100%;border-collapse:collapse;font-family:'Barlow',sans-serif;font-size:12px}
+.tbl thead tr{border-bottom:1px solid var(--border);color:var(--grey-2)}
+.tbl th{padding:8px 12px;font-family:'Barlow Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase;font-weight:600;text-align:left;font-size:11px}
+.tbl th.r,.tbl td.r{text-align:right}
+.tbl tbody tr{border-bottom:1px solid var(--border)}
+.tbl tbody tr:hover{background:rgba(255,224,0,.03)}
+.tbl td{padding:10px 12px;color:var(--text)}
+.tbl td.strong{color:var(--text-strong);font-weight:600}
+.tbl td.muted{color:var(--grey-2)}
+.tbl td.rank{color:var(--yellow);font-family:'Barlow Condensed',sans-serif;font-weight:700}
+.tbl td.gain{color:var(--green);font-weight:700}
+.tbl td.loss{color:var(--red);font-weight:700}
+.wsw{background:var(--panel-2);border:1px solid var(--border);border-left:3px solid var(--yellow);padding:18px 22px;margin-top:18px;border-radius:4px}
+.wsw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.wsw-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.18em;color:var(--yellow);font-weight:700;margin-bottom:8px}
+.wsw-text{font-size:13px;color:var(--text);line-height:1.55}
+.note{font-size:11px;color:var(--grey);margin-top:8px;font-style:italic}
+.method{margin-top:32px;padding:20px;background:var(--panel);border:1px solid var(--border);border-radius:4px}
+.method-title{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.method ul{font-size:12px;color:var(--grey-2);line-height:1.6;margin-top:4px;padding-left:18px}
+@media(max-width:900px){.grid-2,.grid-3,.grid-1-3-1,.grid-1-5-1{grid-template-columns:1fr}.wsw-grid{grid-template-columns:1fr;gap:16px}h1{font-size:30px}}
+.stale-banner{background:linear-gradient(90deg,rgba(248,113,113,0.08),rgba(248,113,113,0.02));border:1px solid rgba(248,113,113,0.3);border-left:3px solid var(--red);border-radius:4px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.stale-banner-icon{font-family:'Barlow Condensed',sans-serif;background:var(--red);color:#000;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.15em}
+.stale-banner-text{font-family:'Barlow',sans-serif;font-size:12px;color:var(--text);line-height:1.5}
+.stale-banner-text strong{color:#fff}
+@media print{
+  body,html{background:#fff;color:#000}.container{padding:12px}.tabs{display:none}.tab-content{display:block !important;page-break-after:always}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="header-row">
+    <div>
+      <span class="brand-tag">JD CANADA</span>
+      <span class="report-label">Weekly eCommerce Report</span>
+      <h1>WEEK ENDING MAY 9, 2026</h1>
+      <div class="subtitle">YTD trends · Last week (May 3 – May 9) vs prior week (Apr 26 – May 2) · Sales = Net Sales · AOV = Shopify reported field</div>
+    </div>
+    <div class="headline">
+      <div class="headline-label">HEADLINE</div>
+      <div class="headline-value">−7.5% WoW · +21.8% YoY · −4.9% vs Budget</div>
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" data-tab="overview">OVERVIEW</button>
+  <button class="tab" data-tab="funnel">CONVERSION FUNNEL</button>
+  <button class="tab" data-tab="channels">MARKETING CHANNELS</button>
+  <button class="tab" data-tab="discounts">DISCOUNTS</button>
+  <button class="tab" data-tab="products">PRODUCTS &amp; BRANDS</button>
+  <button class="tab" data-tab="trade">TRADE MEETING</button>
+  <button class="tab" data-tab="landing">LANDING PAGES</button>
+</div>
+
+<div id="tab-overview" class="tab-content active"></div>
+<div id="tab-funnel" class="tab-content"></div>
+<div id="tab-channels" class="tab-content"></div>
+<div id="tab-discounts" class="tab-content"></div>
+<div id="tab-products" class="tab-content"></div>
+<div id="tab-trade" class="tab-content"></div>
+<div id="tab-landing" class="tab-content"></div>
+
+</div>
+
+<script>
+const DATA = {"LW":{"net_sales":1122122.51,"orders":5511,"sessions":544162,"cart_adds":47326,"completed":9142,"aov":148.69620831065143,"cvr":1.6800144074742447,"atc_rate":8.697042424866124,"co_of_atc":19.317077293665218,"new_c":5262,"ret_c":4324,"nca_share":54.892551637805134},"PW":{"net_sales":1213464.8900000001,"orders":5744,"sessions":553721,"cart_adds":47633,"completed":9515,"aov":147.86844254874651,"cvr":1.7183744159965035,"atc_rate":8.602346669170936,"co_of_atc":19.975647135389334,"new_c":5296,"ret_c":4713,"nca_share":52.91237885902687},"LW_PY":{"net_sales":921161.72,"orders":6241,"sessions":451443,"cart_adds":37952,"completed":7464,"aov":148.1121799391123,"cvr":1.6533648766289433,"atc_rate":8.406819908604186,"co_of_atc":19.666947723440135,"new_c":4287,"ret_c":3474,"nca_share":55.23772709702358},"YTD":{"net_sales":16555247.55,"orders":83205,"sessions":7538937,"cart_adds":667712,"completed":129003,"aov":150.67360257196083,"cvr":1.7111563606381113,"atc_rate":8.856845467736367,"co_of_atc":19.32015599539921,"new_c":72410,"ret_c":62875,"nca_share":53.5240418376021},"YTD_PY":{"net_sales":12390806.41,"orders":86339,"sessions":6453714,"cart_adds":530329,"completed":97129,"aov":149.80497757676136,"cvr":1.5050093636005561,"atc_rate":8.21742333174355,"co_of_atc":18.314857380984257,"new_c":57068,"ret_c":46751,"nca_share":54.96874367890271},"weekly":[{"week":"Feb 01","net_sales":1127026.0,"net_sales_py":895948.0,"orders":6731,"orders_py":5998,"sessions":536236,"sessions_py":427989,"aov":143.44,"aov_py":160.29,"cvr":1.816,"cvr_py":1.545,"atcr":9.43,"atcr_py":8.29,"comp_co_of_atc":19.26,"nca_share":55.32,"nca_share_py":54.14,"net_sales_yoy":25.8,"orders_yoy":12.2,"new_c":5592,"ret_c":4517},{"week":"Feb 08","net_sales":1251959.0,"net_sales_py":1040250.0,"orders":6689,"orders_py":6445,"sessions":530788,"sessions_py":466194,"aov":145.65,"aov_py":157.9,"cvr":1.911,"cvr_py":1.621,"atcr":9.77,"atcr_py":8.5,"comp_co_of_atc":19.55,"nca_share":53.14,"nca_share_py":53.44,"net_sales_yoy":20.4,"orders_yoy":3.8,"new_c":5594,"ret_c":4933},{"week":"Feb 15","net_sales":1083207.0,"net_sales_py":830857.0,"orders":6265,"orders_py":6255,"sessions":513706,"sessions_py":492550,"aov":144.59,"aov_py":147.36,"cvr":1.768,"cvr_py":1.375,"atcr":9.35,"atcr_py":8.13,"comp_co_of_atc":18.9,"nca_share":54.71,"nca_share_py":57.26,"net_sales_yoy":30.4,"orders_yoy":0.2,"new_c":5160,"ret_c":4272},{"week":"Feb 22","net_sales":1509378.0,"net_sales_py":858311.0,"orders":6500,"orders_py":5987,"sessions":545069,"sessions_py":469692,"aov":155.1,"aov_py":150.41,"cvr":1.747,"cvr_py":1.44,"atcr":9.21,"atcr_py":8.22,"comp_co_of_atc":18.97,"nca_share":52.75,"nca_share_py":55.25,"net_sales_yoy":75.9,"orders_yoy":8.6,"new_c":5424,"ret_c":4859},{"week":"Mar 01","net_sales":1298457.0,"net_sales_py":826485.0,"orders":6281,"orders_py":6387,"sessions":555949,"sessions_py":505149,"aov":162.65,"aov_py":149.36,"cvr":1.811,"cvr_py":1.417,"atcr":8.83,"atcr_py":7.99,"comp_co_of_atc":20.5,"nca_share":50.98,"nca_share_py":56.64,"net_sales_yoy":57.1,"orders_yoy":-1.7,"new_c":5389,"ret_c":5181},{"week":"Mar 08","net_sales":1355258.0,"net_sales_py":906151.0,"orders":6532,"orders_py":6936,"sessions":574395,"sessions_py":472673,"aov":156.08,"aov_py":152.65,"cvr":1.759,"cvr_py":1.557,"atcr":8.95,"atcr_py":8.52,"comp_co_of_atc":19.65,"nca_share":53.24,"nca_share_py":54.34,"net_sales_yoy":49.6,"orders_yoy":-5.8,"new_c":5601,"ret_c":4919},{"week":"Mar 15","net_sales":1047767.0,"net_sales_py":899112.0,"orders":5375,"orders_py":6315,"sessions":557866,"sessions_py":498467,"aov":148.44,"aov_py":148.4,"cvr":1.521,"cvr_py":1.517,"atcr":8.3,"atcr_py":8.27,"comp_co_of_atc":18.33,"nca_share":52.2,"nca_share_py":53.99,"net_sales_yoy":16.5,"orders_yoy":-14.9,"new_c":4658,"ret_c":4266},{"week":"Mar 22","net_sales":1063868.0,"net_sales_py":921175.0,"orders":5187,"orders_py":6637,"sessions":532957,"sessions_py":498606,"aov":156.86,"aov_py":143.63,"cvr":1.537,"cvr_py":1.558,"atcr":8.33,"atcr_py":8.63,"comp_co_of_atc":18.45,"nca_share":52.66,"nca_share_py":54.0,"net_sales_yoy":15.5,"orders_yoy":-21.8,"new_c":4510,"ret_c":4055},{"week":"Mar 29","net_sales":977139.0,"net_sales_py":800224.0,"orders":4857,"orders_py":5654,"sessions":519510,"sessions_py":474939,"aov":149.5,"aov_py":148.16,"cvr":1.487,"cvr_py":1.447,"atcr":8.36,"atcr_py":8.0,"comp_co_of_atc":17.78,"nca_share":52.47,"nca_share_py":54.08,"net_sales_yoy":22.1,"orders_yoy":-14.1,"new_c":4275,"ret_c":3873},{"week":"Apr 05","net_sales":1005372.0,"net_sales_py":767850.0,"orders":4939,"orders_py":5446,"sessions":483467,"sessions_py":446165,"aov":153.08,"aov_py":146.87,"cvr":1.606,"cvr_py":1.442,"atcr":8.44,"atcr_py":7.75,"comp_co_of_atc":19.03,"nca_share":53.61,"nca_share_py":55.27,"net_sales_yoy":30.9,"orders_yoy":-9.3,"new_c":4363,"ret_c":3776},{"week":"Apr 12","net_sales":1208983.0,"net_sales_py":849034.0,"orders":6021,"orders_py":5452,"sessions":520679,"sessions_py":475423,"aov":148.57,"aov_py":148.01,"cvr":1.817,"cvr_py":1.408,"atcr":8.94,"atcr_py":7.9,"comp_co_of_atc":20.33,"nca_share":54.07,"nca_share_py":54.3,"net_sales_yoy":42.4,"orders_yoy":10.4,"new_c":5377,"ret_c":4568},{"week":"Apr 19","net_sales":1291246.0,"net_sales_py":948784.0,"orders":6573,"orders_py":6267,"sessions":570432,"sessions_py":361095,"aov":149.83,"aov_py":147.49,"cvr":1.764,"cvr_py":1.503,"atcr":8.78,"atcr_py":7.93,"comp_co_of_atc":20.1,"nca_share":56.13,"nca_share_py":56.16,"net_sales_yoy":36.1,"orders_yoy":4.9,"new_c":5909,"ret_c":4619},{"week":"Apr 26","net_sales":1213465.0,"net_sales_py":925463.0,"orders":5744,"orders_py":6319,"sessions":553721,"sessions_py":413329,"aov":147.87,"aov_py":148.19,"cvr":1.718,"cvr_py":1.62,"atcr":8.6,"atcr_py":8.47,"comp_co_of_atc":19.98,"nca_share":52.91,"nca_share_py":55.71,"net_sales_yoy":31.1,"orders_yoy":-9.1,"new_c":5296,"ret_c":4713},{"week":"May 03","net_sales":1122123.0,"net_sales_py":921162.0,"orders":5511,"orders_py":6241,"sessions":544162,"sessions_py":451443,"aov":148.7,"aov_py":148.11,"cvr":1.68,"cvr_py":1.653,"atcr":8.7,"atcr_py":8.41,"comp_co_of_atc":19.32,"nca_share":54.89,"nca_share_py":55.24,"net_sales_yoy":21.8,"orders_yoy":-11.7,"new_c":5262,"ret_c":4324}],"daily_lw":[{"day":"Sun May 03","net_sales":183548.0,"orders":895,"sessions":80792,"cvr":1.727,"aov":150.84},{"day":"Mon May 04","net_sales":150671.0,"orders":715,"sessions":73256,"cvr":1.668,"aov":147.63},{"day":"Tue May 05","net_sales":144695.0,"orders":708,"sessions":70791,"cvr":1.697,"aov":147.99},{"day":"Wed May 06","net_sales":136042.0,"orders":743,"sessions":74063,"cvr":1.658,"aov":146.68},{"day":"Thu May 07","net_sales":171730.0,"orders":832,"sessions":78939,"cvr":1.732,"aov":144.8},{"day":"Fri May 08","net_sales":174684.0,"orders":806,"sessions":79213,"cvr":1.733,"aov":152.39},{"day":"Sat May 09","net_sales":160753.0,"orders":812,"sessions":87108,"cvr":1.557,"aov":150.07}],"daily_pw":[{"day":"Sun Apr 26","net_sales":204343.0,"orders":958,"sessions":83683,"cvr":1.745},{"day":"Mon Apr 27","net_sales":165269.0,"orders":805,"sessions":77058,"cvr":1.612},{"day":"Tue Apr 28","net_sales":131505.0,"orders":733,"sessions":76909,"cvr":1.595},{"day":"Wed Apr 29","net_sales":150371.0,"orders":739,"sessions":75473,"cvr":1.573},{"day":"Thu Apr 30","net_sales":159813.0,"orders":803,"sessions":77968,"cvr":1.749},{"day":"Fri May 01","net_sales":169903.0,"orders":796,"sessions":75737,"cvr":1.73},{"day":"Sat May 02","net_sales":232261.0,"orders":910,"sessions":86893,"cvr":1.985}],"channels_lw_pw":[{"channel":"Google Paid","sales_lw":478883.0,"sales_pw":496921.0,"sales_py":386149.0,"sales_fc":662180.0,"orders_lw":3766,"orders_pw":3778,"orders_fc":5187,"sessions_lw":218439,"sessions_pw":210863,"sessions_py":171718,"sales_wow":-3.6,"orders_wow":-0.3,"sessions_wow":3.6,"sales_yoy":24.0,"sessions_yoy":27.2,"fc_vs_lc":38.3,"share_lw":58.9,"cvr_lw":1.75,"atc_rate_lw":10.21,"aov_lw":127.16,"bounce":45.5,"duration":198.0,"pv":5.05},{"channel":"Google Organic","sales_lw":92335.0,"sales_pw":87541.0,"sales_py":60724.0,"sales_fc":123700.0,"orders_lw":748,"orders_pw":733,"orders_fc":965,"sessions_lw":57168,"sessions_pw":57550,"sessions_py":42767,"sales_wow":5.5,"orders_wow":2.0,"sessions_wow":-0.7,"sales_yoy":52.1,"sessions_yoy":33.7,"fc_vs_lc":34.0,"share_lw":11.4,"cvr_lw":1.34,"atc_rate_lw":7.19,"aov_lw":123.44,"bounce":44.5,"duration":192.0,"pv":5.47},{"channel":"Shop App / Shopify","sales_lw":68281.0,"sales_pw":89168.0,"sales_py":2587.0,"sales_fc":15442.0,"orders_lw":482,"orders_pw":544,"orders_fc":130,"sessions_lw":5779,"sessions_pw":5838,"sessions_py":556,"sales_wow":-23.4,"orders_wow":-11.4,"sessions_wow":-1.0,"sales_yoy":2539.7,"sessions_yoy":939.4,"fc_vs_lc":-77.4,"share_lw":8.4,"cvr_lw":1.09,"atc_rate_lw":5.59,"aov_lw":141.66,"bounce":55.6,"duration":139.0,"pv":3.46},{"channel":"Affiliate/Coupon","sales_lw":39921.0,"sales_pw":56021.0,"sales_py":3307.0,"sales_fc":16368.0,"orders_lw":288,"orders_pw":380,"orders_fc":100,"sessions_lw":3090,"sessions_pw":3270,"sessions_py":381,"sales_wow":-28.7,"orders_wow":-24.2,"sessions_wow":-5.5,"sales_yoy":1107.2,"sessions_yoy":711.0,"fc_vs_lc":-59.0,"share_lw":4.9,"cvr_lw":4.11,"atc_rate_lw":23.72,"aov_lw":138.62,"bounce":22.2,"duration":281.0,"pv":5.7},{"channel":"BNPL Apps","sales_lw":32577.0,"sales_pw":38147.0,"sales_py":41547.0,"sales_fc":27022.0,"orders_lw":189,"orders_pw":201,"orders_fc":155,"sessions_lw":3703,"sessions_pw":3858,"sessions_py":4682,"sales_wow":-14.6,"orders_wow":-6.0,"sessions_wow":-4.0,"sales_yoy":-21.6,"sessions_yoy":-20.9,"fc_vs_lc":-17.1,"share_lw":4.0,"cvr_lw":5.08,"atc_rate_lw":26.57,"aov_lw":172.37,"bounce":11.1,"duration":304.0,"pv":6.93},{"channel":"SMS (Attentive)","sales_lw":27285.0,"sales_pw":28749.0,"sales_py":77473.0,"sales_fc":3605.0,"orders_lw":202,"orders_pw":204,"orders_fc":33,"sessions_lw":1318,"sessions_pw":1022,"sessions_py":6461,"sales_wow":-5.1,"orders_wow":-1.0,"sessions_wow":29.0,"sales_yoy":-64.8,"sessions_yoy":-79.6,"fc_vs_lc":-86.8,"share_lw":3.4,"cvr_lw":5.31,"atc_rate_lw":18.13,"aov_lw":135.07,"bounce":41.5,"duration":211.0,"pv":4.56},{"channel":"Email (Klaviyo)","sales_lw":24715.0,"sales_pw":36616.0,"sales_py":43154.0,"sales_fc":45214.0,"orders_lw":183,"orders_pw":266,"orders_fc":312,"sessions_lw":18570,"sessions_pw":22187,"sessions_py":33138,"sales_wow":-32.5,"orders_wow":-31.2,"sessions_wow":-16.3,"sales_yoy":-42.7,"sessions_yoy":-44.0,"fc_vs_lc":82.9,"share_lw":3.0,"cvr_lw":0.93,"atc_rate_lw":7.87,"aov_lw":135.05,"bounce":48.3,"duration":160.0,"pv":4.61},{"channel":"Meta Paid","sales_lw":18120.0,"sales_pw":22832.0,"sales_py":15065.0,"sales_fc":26837.0,"orders_lw":152,"orders_pw":166,"orders_fc":213,"sessions_lw":52118,"sessions_pw":59511,"sessions_py":32558,"sales_wow":-20.6,"orders_wow":-8.4,"sessions_wow":-12.4,"sales_yoy":20.3,"sessions_yoy":60.1,"fc_vs_lc":48.1,"share_lw":2.2,"cvr_lw":0.31,"atc_rate_lw":4.76,"aov_lw":119.21,"bounce":65.3,"duration":69.0,"pv":2.18},{"channel":"Other Search","sales_lw":15167.0,"sales_pw":16096.0,"sales_py":9146.0,"sales_fc":19875.0,"orders_lw":119,"orders_pw":118,"orders_fc":149,"sessions_lw":6091,"sessions_pw":6048,"sessions_py":3351,"sales_wow":-5.8,"orders_wow":0.8,"sessions_wow":0.7,"sales_yoy":65.8,"sessions_yoy":81.8,"fc_vs_lc":31.0,"share_lw":1.9,"cvr_lw":1.95,"atc_rate_lw":9.54,"aov_lw":127.45,"bounce":25.4,"duration":277.0,"pv":16.13},{"channel":"Other","sales_lw":5864.0,"sales_pw":6222.0,"sales_py":3948.0,"sales_fc":4546.0,"orders_lw":49,"orders_pw":51,"orders_fc":37,"sessions_lw":1924,"sessions_pw":2017,"sessions_py":3310,"sales_wow":-5.8,"orders_wow":-3.9,"sessions_wow":-4.6,"sales_yoy":48.5,"sessions_yoy":-41.9,"fc_vs_lc":-22.5,"share_lw":0.7,"cvr_lw":1.77,"atc_rate_lw":8.63,"aov_lw":119.66,"bounce":36.2,"duration":173.0,"pv":5.73},{"channel":"Direct (jdsports)","sales_lw":4532.0,"sales_pw":5638.0,"sales_py":25189.0,"sales_fc":5642.0,"orders_lw":47,"orders_pw":49,"orders_fc":32,"sessions_lw":1308,"sessions_pw":1434,"sessions_py":6296,"sales_wow":-19.6,"orders_wow":-4.1,"sessions_wow":-8.8,"sales_yoy":-82.0,"sessions_yoy":-79.2,"fc_vs_lc":24.5,"share_lw":0.6,"cvr_lw":1.45,"atc_rate_lw":7.72,"aov_lw":96.42,"bounce":30.7,"duration":193.0,"pv":7.13},{"channel":"Meta Organic","sales_lw":1722.0,"sales_pw":3597.0,"sales_py":1913.0,"sales_fc":1865.0,"orders_lw":13,"orders_pw":26,"orders_fc":13,"sessions_lw":1557,"sessions_pw":2024,"sessions_py":1748,"sales_wow":-52.1,"orders_wow":-50.0,"sessions_wow":-23.1,"sales_yoy":-10.0,"sessions_yoy":-10.9,"fc_vs_lc":8.3,"share_lw":0.2,"cvr_lw":0.77,"atc_rate_lw":5.27,"aov_lw":132.5,"bounce":56.8,"duration":116.0,"pv":2.93},{"channel":"Google Other","sales_lw":1626.0,"sales_pw":3943.0,"sales_py":113.0,"sales_fc":2298.0,"orders_lw":19,"orders_pw":23,"orders_fc":19,"sessions_lw":324,"sessions_pw":281,"sessions_py":27,"sales_wow":-58.8,"orders_wow":-17.4,"sessions_wow":15.3,"sales_yoy":1338.7,"sessions_yoy":1100.0,"fc_vs_lc":41.4,"share_lw":0.2,"cvr_lw":4.63,"atc_rate_lw":17.9,"aov_lw":85.57,"bounce":37.7,"duration":223.0,"pv":5.33},{"channel":"Unattributed","sales_lw":1548.0,"sales_pw":328.0,"sales_py":4406.0,"sales_fc":3364.0,"orders_lw":14,"orders_pw":7,"orders_fc":26,"sessions_lw":832,"sessions_pw":1010,"sessions_py":2077,"sales_wow":372.4,"orders_wow":100.0,"sessions_wow":-17.6,"sales_yoy":-64.9,"sessions_yoy":-59.9,"fc_vs_lc":117.3,"share_lw":0.2,"cvr_lw":2.28,"atc_rate_lw":10.1,"aov_lw":110.6,"bounce":57.6,"duration":180.0,"pv":3.94},{"channel":"AI Search","sales_lw":734.0,"sales_pw":1680.0,"sales_py":276.0,"sales_fc":1684.0,"orders_lw":12,"orders_pw":15,"orders_fc":15,"sessions_lw":1381,"sessions_pw":992,"sessions_py":204,"sales_wow":-56.3,"orders_wow":-20.0,"sessions_wow":39.2,"sales_yoy":165.9,"sessions_yoy":577.0,"fc_vs_lc":129.5,"share_lw":0.1,"cvr_lw":0.72,"atc_rate_lw":7.46,"aov_lw":61.15,"bounce":56.0,"duration":129.0,"pv":3.39},{"channel":"YouTube","sales_lw":115.0,"sales_pw":0.0,"sales_py":85.0,"sales_fc":136.0,"orders_lw":1,"orders_pw":0,"orders_fc":1,"sessions_lw":137,"sessions_pw":191,"sessions_py":40,"sales_wow":null,"orders_wow":null,"sessions_wow":-28.3,"sales_yoy":35.6,"sessions_yoy":242.5,"fc_vs_lc":17.9,"share_lw":0.0,"cvr_lw":0.73,"atc_rate_lw":2.19,"aov_lw":114.98,"bounce":65.0,"duration":81.0,"pv":3.43},{"channel":"Pinterest Organic","sales_lw":15.0,"sales_pw":376.0,"sales_py":0.0,"sales_fc":100.0,"orders_lw":2,"orders_pw":4,"orders_fc":3,"sessions_lw":676,"sessions_pw":697,"sessions_py":203,"sales_wow":-96.0,"orders_wow":-50.0,"sessions_wow":-3.0,"sales_yoy":null,"sessions_yoy":233.0,"fc_vs_lc":569.2,"share_lw":0.0,"cvr_lw":0.3,"atc_rate_lw":6.95,"aov_lw":7.45,"bounce":69.8,"duration":63.0,"pv":2.34},{"channel":"Pinterest Paid","sales_lw":0.0,"sales_pw":0.0,"sales_py":0.0,"sales_fc":0.0,"orders_lw":0,"orders_pw":0,"orders_fc":0,"sessions_lw":164,"sessions_pw":1946,"sessions_py":17,"sales_wow":null,"orders_wow":null,"sessions_wow":-91.6,"sales_yoy":null,"sessions_yoy":864.7,"fc_vs_lc":null,"share_lw":0.0,"cvr_lw":0.0,"atc_rate_lw":0.0,"aov_lw":null,"bounce":92.7,"duration":12.0,"pv":1.14},{"channel":"Reddit","sales_lw":0.0,"sales_pw":0.0,"sales_py":0.0,"sales_fc":0.0,"orders_lw":0,"orders_pw":0,"orders_fc":0,"sessions_lw":187,"sessions_pw":679,"sessions_py":47,"sales_wow":null,"orders_wow":null,"sessions_wow":-72.5,"sales_yoy":null,"sessions_yoy":297.9,"fc_vs_lc":null,"share_lw":0.0,"cvr_lw":0.0,"atc_rate_lw":0.0,"aov_lw":null,"bounce":88.2,"duration":14.0,"pv":1.86},{"channel":"TikTok","sales_lw":0.0,"sales_pw":0.0,"sales_py":0.0,"sales_fc":115.0,"orders_lw":0,"orders_pw":0,"orders_fc":1,"sessions_lw":1801,"sessions_pw":109,"sessions_py":1034,"sales_wow":null,"orders_wow":null,"sessions_wow":1552.3,"sales_yoy":null,"sessions_yoy":74.2,"fc_vs_lc":null,"share_lw":0.0,"cvr_lw":0.0,"atc_rate_lw":0.11,"aov_lw":null,"bounce":98.4,"duration":4.0,"pv":1.06}],"channels_ytd":[{"channel":"Google Paid","sales":6397751.0,"orders":50378,"sessions":2702525,"share":58.3},{"channel":"Google Organic","sales":1397065.0,"orders":11210,"sessions":839513,"share":12.7},{"channel":"Email (Klaviyo)","sales":543657.0,"orders":3874,"sessions":382979,"share":5.0},{"channel":"BNPL Apps","sales":521297.0,"orders":2955,"sessions":54283,"share":4.8},{"channel":"SMS (Attentive)","sales":511887.0,"orders":4099,"sessions":37682,"share":4.7},{"channel":"Affiliate/Coupon","sales":451495.0,"orders":2917,"sessions":17206,"share":4.1},{"channel":"Meta Paid","sales":327169.0,"orders":2396,"sessions":697721,"share":3.0},{"channel":"Shop App / Shopify","sales":257456.0,"orders":1746,"sessions":33419,"share":2.3},{"channel":"Other Search","sales":197025.0,"orders":1539,"sessions":79747,"share":1.8},{"channel":"Direct (jdsports)","sales":108071.0,"orders":772,"sessions":24248,"share":1.0},{"channel":"Other","sales":99676.0,"orders":745,"sessions":28763,"share":0.9},{"channel":"Unattributed","sales":67067.0,"orders":611,"sessions":47915,"share":0.6},{"channel":"Meta Organic","sales":52851.0,"orders":386,"sessions":29581,"share":0.5},{"channel":"AI Search","sales":20552.0,"orders":171,"sessions":11842,"share":0.2},{"channel":"Google Other","sales":11478.0,"orders":87,"sessions":5008,"share":0.1},{"channel":"Pinterest Organic","sales":3718.0,"orders":42,"sessions":11242,"share":0.0},{"channel":"Reddit","sales":797.0,"orders":3,"sessions":1877,"share":0.0},{"channel":"YouTube","sales":738.0,"orders":5,"sessions":1544,"share":0.0},{"channel":"TikTok","sales":562.0,"orders":5,"sessions":34256,"share":0.0},{"channel":"Pinterest Paid","sales":146.0,"orders":1,"sessions":3297,"share":0.0}],"discounts":[{"week":"Jan 04","orders":10298,"disc_orders":2790,"disc_order_rate":27.09,"disc_dollar_rate":2.37,"applied_disc":35220.0},{"week":"Jan 11","orders":11987,"disc_orders":2965,"disc_order_rate":24.74,"disc_dollar_rate":2.13,"applied_disc":38435.0},{"week":"Jan 18","orders":11431,"disc_orders":4123,"disc_order_rate":36.07,"disc_dollar_rate":3.05,"applied_disc":51023.0},{"week":"Jan 25","orders":10981,"disc_orders":3887,"disc_order_rate":35.4,"disc_dollar_rate":3.25,"applied_disc":53882.0},{"week":"Feb 01","orders":10312,"disc_orders":2640,"disc_order_rate":25.6,"disc_dollar_rate":2.31,"applied_disc":35047.0},{"week":"Feb 08","orders":10718,"disc_orders":2808,"disc_order_rate":26.2,"disc_dollar_rate":2.26,"applied_disc":36107.0},{"week":"Feb 15","orders":9637,"disc_orders":2612,"disc_order_rate":27.1,"disc_dollar_rate":2.4,"applied_disc":34312.0},{"week":"Feb 22","orders":11307,"disc_orders":2673,"disc_order_rate":23.64,"disc_dollar_rate":1.88,"applied_disc":33875.0},{"week":"Mar 01","orders":11006,"disc_orders":2493,"disc_order_rate":22.65,"disc_dollar_rate":1.9,"applied_disc":34848.0},{"week":"Mar 08","orders":10927,"disc_orders":2591,"disc_order_rate":23.71,"disc_dollar_rate":2.03,"applied_disc":35296.0},{"week":"Mar 15","orders":9182,"disc_orders":1487,"disc_order_rate":16.19,"disc_dollar_rate":1.6,"applied_disc":22211.0},{"week":"Mar 22","orders":8836,"disc_orders":1483,"disc_order_rate":16.78,"disc_dollar_rate":1.73,"applied_disc":24447.0},{"week":"Mar 29","orders":8345,"disc_orders":1073,"disc_order_rate":12.86,"disc_dollar_rate":1.66,"applied_disc":21094.0},{"week":"Apr 05","orders":8300,"disc_orders":795,"disc_order_rate":9.58,"disc_dollar_rate":1.15,"applied_disc":14789.0},{"week":"Apr 12","orders":10157,"disc_orders":1201,"disc_order_rate":11.82,"disc_dollar_rate":1.29,"applied_disc":19647.0},{"week":"Apr 19","orders":10745,"disc_orders":1510,"disc_order_rate":14.05,"disc_dollar_rate":1.63,"applied_disc":26704.0},{"week":"Apr 26","orders":10168,"disc_orders":1417,"disc_order_rate":13.94,"disc_dollar_rate":1.55,"applied_disc":23654.0},{"week":"May 03","orders":9731,"disc_orders":1324,"disc_order_rate":13.61,"disc_dollar_rate":1.51,"applied_disc":22158.0}],"brands":[{"brand":"Nike","sales_lw":396378.0,"sales_pw":412265.0,"units_lw":4054,"units_pw":4165,"wow":-3.9,"share_lw":35.5},{"brand":"Jordan","sales_lw":184272.0,"sales_pw":242485.0,"units_lw":1784,"units_pw":2031,"wow":-24.0,"share_lw":16.5},{"brand":"Adidas","sales_lw":164974.0,"sales_pw":178782.0,"units_lw":2184,"units_pw":2461,"wow":-7.7,"share_lw":14.8},{"brand":"New Balance","sales_lw":111997.0,"sales_pw":115456.0,"units_lw":1099,"units_pw":1134,"wow":-3.0,"share_lw":10.0},{"brand":"Other","sales_lw":58663.0,"sales_pw":59413.0,"units_lw":1280,"units_pw":1126,"wow":-1.3,"share_lw":5.3},{"brand":"Asics","sales_lw":40689.0,"sales_pw":42419.0,"units_lw":327,"units_pw":362,"wow":-4.1,"share_lw":3.6},{"brand":"On","sales_lw":33861.0,"sales_pw":31288.0,"units_lw":207,"units_pw":188,"wow":8.2,"share_lw":3.0},{"brand":"Salomon","sales_lw":23732.0,"sales_pw":35134.0,"units_lw":114,"units_pw":173,"wow":-32.5,"share_lw":2.1},{"brand":"Hoka","sales_lw":22761.0,"sales_pw":18865.0,"units_lw":126,"units_pw":108,"wow":20.7,"share_lw":2.0},{"brand":"Puma","sales_lw":18977.0,"sales_pw":22276.0,"units_lw":235,"units_pw":313,"wow":-14.8,"share_lw":1.7},{"brand":"UGG","sales_lw":18378.0,"sales_pw":5202.0,"units_lw":210,"units_pw":53,"wow":253.3,"share_lw":1.6},{"brand":"Saucony","sales_lw":12082.0,"sales_pw":12835.0,"units_lw":221,"units_pw":253,"wow":-5.9,"share_lw":1.1},{"brand":"Birkenstock","sales_lw":7970.0,"sales_pw":7750.0,"units_lw":57,"units_pw":48,"wow":2.8,"share_lw":0.7},{"brand":"Vans","sales_lw":7897.0,"sales_pw":7288.0,"units_lw":183,"units_pw":206,"wow":8.4,"share_lw":0.7},{"brand":"Reebok","sales_lw":5791.0,"sales_pw":7584.0,"units_lw":93,"units_pw":132,"wow":-23.6,"share_lw":0.5},{"brand":"Crocs","sales_lw":3512.0,"sales_pw":3689.0,"units_lw":69,"units_pw":69,"wow":-4.8,"share_lw":0.3},{"brand":"Timberland","sales_lw":2148.0,"sales_pw":1365.0,"units_lw":16,"units_pw":12,"wow":57.3,"share_lw":0.2},{"brand":"Converse","sales_lw":1354.0,"sales_pw":2441.0,"units_lw":19,"units_pw":32,"wow":-44.5,"share_lw":0.1}],"top_products_lw":[{"title":"Jordan 1 Retro Low OG Black / Black - Varsity Red","sales":32248.0,"units":181,"orders":189},{"title":"adidas Women's Samba Jane White / Alumina - Core Black","sales":27028.0,"units":211,"orders":240},{"title":"Nike Air Force 1 '07 / White","sales":9656.0,"units":65,"orders":86},{"title":"New Balance 530 White / Natural Indigo","sales":7186.0,"units":57,"orders":75},{"title":"Nike Air Force 1 Black / Black - Dark Smoke Grey","sales":7014.0,"units":43,"orders":50},{"title":"Salomon XT-6 Rainy Day / Black - White","sales":6999.0,"units":31,"orders":36},{"title":"Nike Air Max 90 Black / Silver","sales":6738.0,"units":49,"orders":55},{"title":"Nike Air Max 90 Black / Buff Gold - Anthracite","sales":6144.0,"units":37,"orders":43},{"title":"Jordan 1 Low Black / Particle Grey - White","sales":5933.0,"units":40,"orders":41},{"title":"Salomon XT-6 Earth Brown / Walnut - Silver","sales":5675.0,"units":25,"orders":37},{"title":"Nike Women's Air Force 1 White / White - Playful Pink","sales":5663.0,"units":38,"orders":42},{"title":"UGG Women's Tasman II / Rocky Oak","sales":5622.0,"units":67,"orders":69},{"title":"UGG Women's Goldenstar Clog / Chestnut","sales":5525.0,"units":66,"orders":64},{"title":"Jordan 4 Retro OG Flight Club Sail / Black - University Red","sales":5516.0,"units":20,"orders":26},{"title":"Nike Shox NZ Black / White","sales":5338.0,"units":54,"orders":63},{"title":"New Balance 9060 Cortado / Linen","sales":5148.0,"units":34,"orders":49},{"title":"Nike Air DT Max '96 Low Black / Gold","sales":5040.0,"units":24,"orders":25},{"title":"Nike Dunk Low Retro SE Pale Ivory / Baroque Brown","sales":4910.0,"units":30,"orders":30},{"title":"Nike Dunk Low Retro White / Light Smoke","sales":4903.0,"units":33,"orders":36},{"title":"PUMA Women's Speedcat Ballet Venus Jasmine Flower / Warm White","sales":4732.0,"units":41,"orders":52}],"gainers":[{"title":"adidas Women's Samba Jane White / Alumina - Core Black","lw":27028.0,"pw":2960.0,"delta":24068.0},{"title":"UGG Women's Goldenstar Clog / Chestnut","lw":5525.0,"pw":0.0,"delta":5525.0},{"title":"UGG Women's Tasman II / Rocky Oak","lw":5622.0,"pw":270.0,"delta":5352.0},{"title":"Jordan 13 Retro Navy / University Blue","lw":4040.0,"pw":0.0,"delta":4040.0},{"title":"Jordan 1 Low Black / Particle Grey - White","lw":5933.0,"pw":2830.0,"delta":3103.0},{"title":"Nike Dunk Low Retro White / Light Smoke","lw":4903.0,"pw":2135.0,"delta":2768.0},{"title":"Nike Sportswear Tech Fleece Joggers Reflective / Black","lw":4195.0,"pw":1735.0,"delta":2460.0},{"title":"Nike Air Max 90 Grey / Black","lw":4014.0,"pw":1617.0,"delta":2398.0},{"title":"Salomon XT-6 Rainy Day / Black - White","lw":6999.0,"pw":4676.0,"delta":2322.0},{"title":"Nike Air DT Max '96 Low Black / Gold","lw":5040.0,"pw":2730.0,"delta":2310.0}],"decliners":[{"title":"Jordan 1 Retro Low OG Black / Black - Varsity Red","lw":32248.0,"pw":75045.0,"delta":-42797.0},{"title":"Salomon XT-6 Earth Brown / Walnut - Silver","lw":5675.0,"pw":16481.0,"delta":-10806.0},{"title":"adidas EVO SL Solar Yellow / Plum","lw":1208.0,"pw":7925.0,"delta":-6717.0},{"title":"Jordan 6 Retro Black / Reflect Silver - Black","lw":3159.0,"pw":9450.0,"delta":-6291.0},{"title":"Nike Air Max 95 OG Black / Neon Yellow","lw":2555.0,"pw":8098.0,"delta":-5543.0},{"title":"Nike Air Force 1 '07 Black / Black","lw":2440.0,"pw":7708.0,"delta":-5268.0},{"title":"Nike Air Force 1 Black / Black - Dark Smoke Grey","lw":7014.0,"pw":11787.0,"delta":-4773.0},{"title":"Jordan 5 Retro OG White / Black - Metallic Silver","lw":2970.0,"pw":7438.0,"delta":-4468.0},{"title":"Nike Zoom Vomero 5 Platinum Tint / Photon Dust - Cashmere","lw":3905.0,"pw":7851.0,"delta":-3946.0},{"title":"Nike Air Force 1 '07 / White","lw":9656.0,"pw":13528.0,"delta":-3872.0}],"ytd_top":[{"title":"Nike Air Max 95 OG Black / Neon Yellow","sales":396489.0,"units":1715,"orders":1835},{"title":"Jordan 5 Retro Wolf Grey Light Graphite / White - Wolf Grey","sales":193680.0,"units":694,"orders":1106},{"title":"Jordan 6 Retro Infrared Black / Light Crimson","sales":142498.0,"units":535,"orders":633},{"title":"Nike Air Force 1 '07 / White","sales":129852.0,"units":886,"orders":1175},{"title":"Jordan 1 Retro Low OG Black / Black - Varsity Red","sales":107293.0,"units":598,"orders":605},{"title":"Nike Women's Air Force 1 '07 Sail / Silt Red - Sail","sales":106555.0,"units":660,"orders":814},{"title":"Jordan 4 Retro OG Flight Club Sail / Black - University Red","sales":104252.0,"units":376,"orders":528},{"title":"adidas Women's Samba Jane White / Alumina - Core Black","sales":90022.0,"units":702,"orders":842},{"title":"New Balance 530 White / Natural Indigo","sales":72220.0,"units":573,"orders":797},{"title":"On Cloudmonster Void Black / Black","sales":71560.0,"units":529,"orders":288}],"date_range":"2026-05-03 to 2026-05-09","pw_date_range":"2026-04-26 to 2026-05-02","mediums":[{"medium":"search","sales":585787.0,"orders":4637,"sessions":281167,"cvr":1.67,"aov":126.33,"sales_wow":-2.9,"sessions_wow":2.6,"sales_yoy":28.8},{"medium":"email","sales":28224.0,"orders":215,"sessions":23709,"cvr":0.86,"aov":131.27,"sales_wow":-31.7,"sessions_wow":-13.2,"sales_yoy":-34.7},{"medium":"sms","sales":27285.0,"orders":202,"sessions":1323,"cvr":5.29,"aov":135.07,"sales_wow":-5.1,"sessions_wow":28.6,"sales_yoy":-64.9},{"medium":"social","sales":20700.0,"orders":173,"sessions":57094,"cvr":0.31,"aov":119.65,"sales_wow":-24.5,"sessions_wow":-12.7,"sales_yoy":12.9},{"medium":"affiliate","sales":2687.0,"orders":21,"sessions":235,"cvr":2.13,"aov":127.96,"sales_wow":-15.2,"sessions_wow":-8.9,"sales_yoy":555.6},{"medium":"email/sms","sales":168.0,"orders":1,"sessions":57,"cvr":1.75,"aov":168.0,"sales_wow":-41.1,"sessions_wow":-27.8,"sales_yoy":null}],"traffic_types":[{"traffic_type":"paid","sales":556104.0,"orders":4366,"sessions":298695,"cvr":1.46,"share":68.4,"sales_wow":-6.4,"sales_yoy":6.5},{"traffic_type":"organic","sales":202226.0,"orders":1565,"sessions":66681,"cvr":2.35,"share":24.9,"sales_wow":-13.1,"sales_yoy":86.4},{"traffic_type":"unknown","sales":55111.0,"orders":355,"sessions":11163,"cvr":3.18,"share":6.8,"sales_wow":-17.6,"sales_yoy":23.7},{"traffic_type":"unattributed","sales":0.0,"orders":0,"sessions":18,"cvr":0.0,"share":0.0,"sales_wow":-100.0,"sales_yoy":null}],"weekly_channels":{"Google Paid":[{"week":"Feb 01","sales":471017.0,"sessions":194640,"orders":3979},{"week":"Feb 08","sales":522130.0,"sessions":198355,"orders":4122},{"week":"Feb 15","sales":435173.0,"sessions":185214,"orders":3589},{"week":"Feb 22","sales":457547.0,"sessions":185808,"orders":3582},{"week":"Mar 01","sales":486853.0,"sessions":188187,"orders":3647},{"week":"Mar 08","sales":467552.0,"sessions":196848,"orders":3687},{"week":"Mar 15","sales":417890.0,"sessions":186744,"orders":3321},{"week":"Mar 22","sales":412146.0,"sessions":182996,"orders":3195},{"week":"Mar 29","sales":372511.0,"sessions":172225,"orders":2929},{"week":"Apr 05","sales":375270.0,"sessions":165817,"orders":2953},{"week":"Apr 12","sales":467342.0,"sessions":191497,"orders":3678},{"week":"Apr 19","sales":536515.0,"sessions":224892,"orders":4152},{"week":"Apr 26","sales":496921.0,"sessions":210863,"orders":3778},{"week":"May 03","sales":478883.0,"sessions":218439,"orders":3766}],"Google Organic":[{"week":"Feb 01","sales":82226.0,"sessions":56050,"orders":721},{"week":"Feb 08","sales":88684.0,"sessions":55286,"orders":744},{"week":"Feb 15","sales":89121.0,"sessions":56434,"orders":750},{"week":"Feb 22","sales":96364.0,"sessions":61115,"orders":782},{"week":"Mar 01","sales":142094.0,"sessions":66480,"orders":1002},{"week":"Mar 08","sales":119367.0,"sessions":65427,"orders":951},{"week":"Mar 15","sales":82934.0,"sessions":59673,"orders":724},{"week":"Mar 22","sales":92755.0,"sessions":59745,"orders":731},{"week":"Mar 29","sales":80428.0,"sessions":60175,"orders":688},{"week":"Apr 05","sales":103068.0,"sessions":60895,"orders":789},{"week":"Apr 12","sales":145760.0,"sessions":63029,"orders":1043},{"week":"Apr 19","sales":94388.0,"sessions":60486,"orders":804},{"week":"Apr 26","sales":87541.0,"sessions":57550,"orders":733},{"week":"May 03","sales":92335.0,"sessions":57168,"orders":748}],"Affiliate/Coupon":[{"week":"Feb 01","sales":19729.0,"sessions":398,"orders":136},{"week":"Feb 08","sales":14792.0,"sessions":404,"orders":124},{"week":"Feb 15","sales":12453.0,"sessions":368,"orders":102},{"week":"Feb 22","sales":11669.0,"sessions":390,"orders":94},{"week":"Mar 01","sales":23002.0,"sessions":404,"orders":138},{"week":"Mar 08","sales":32759.0,"sessions":456,"orders":187},{"week":"Mar 15","sales":25085.0,"sessions":461,"orders":163},{"week":"Mar 22","sales":29243.0,"sessions":447,"orders":177},{"week":"Mar 29","sales":34696.0,"sessions":372,"orders":202},{"week":"Apr 05","sales":28267.0,"sessions":1013,"orders":170},{"week":"Apr 12","sales":53634.0,"sessions":2815,"orders":337},{"week":"Apr 19","sales":70224.0,"sessions":3318,"orders":419},{"week":"Apr 26","sales":56021.0,"sessions":3270,"orders":380},{"week":"May 03","sales":39921.0,"sessions":3090,"orders":288}],"BNPL Apps":[{"week":"Feb 01","sales":33734.0,"sessions":3879,"orders":201},{"week":"Feb 08","sales":36891.0,"sessions":3743,"orders":212},{"week":"Feb 15","sales":38508.0,"sessions":3667,"orders":226},{"week":"Feb 22","sales":31346.0,"sessions":3674,"orders":177},{"week":"Mar 01","sales":36874.0,"sessions":3885,"orders":205},{"week":"Mar 08","sales":45341.0,"sessions":4066,"orders":254},{"week":"Mar 15","sales":39038.0,"sessions":4027,"orders":219},{"week":"Mar 22","sales":38231.0,"sessions":3974,"orders":215},{"week":"Mar 29","sales":34859.0,"sessions":4048,"orders":205},{"week":"Apr 05","sales":35483.0,"sessions":3839,"orders":196},{"week":"Apr 12","sales":45057.0,"sessions":3926,"orders":230},{"week":"Apr 19","sales":35211.0,"sessions":3994,"orders":225},{"week":"Apr 26","sales":38147.0,"sessions":3858,"orders":201},{"week":"May 03","sales":32577.0,"sessions":3703,"orders":189}],"Email (Klaviyo)":[{"week":"Feb 01","sales":33492.0,"sessions":32576,"orders":284},{"week":"Feb 08","sales":52592.0,"sessions":34637,"orders":351},{"week":"Feb 15","sales":37689.0,"sessions":31342,"orders":283},{"week":"Feb 22","sales":63778.0,"sessions":36448,"orders":434},{"week":"Mar 01","sales":50064.0,"sessions":31778,"orders":351},{"week":"Mar 08","sales":34994.0,"sessions":26919,"orders":248},{"week":"Mar 15","sales":33414.0,"sessions":25680,"orders":243},{"week":"Mar 22","sales":22760.0,"sessions":23852,"orders":184},{"week":"Mar 29","sales":45181.0,"sessions":38117,"orders":308},{"week":"Apr 05","sales":30864.0,"sessions":22735,"orders":216},{"week":"Apr 12","sales":37229.0,"sessions":19466,"orders":252},{"week":"Apr 19","sales":40269.0,"sessions":18672,"orders":271},{"week":"Apr 26","sales":36616.0,"sessions":22187,"orders":266},{"week":"May 03","sales":24715.0,"sessions":18570,"orders":183}],"Shop App / Shopify":[{"week":"Feb 01","sales":3073.0,"sessions":779,"orders":34},{"week":"Feb 08","sales":5013.0,"sessions":727,"orders":30},{"week":"Feb 15","sales":3192.0,"sessions":614,"orders":35},{"week":"Feb 22","sales":3082.0,"sessions":623,"orders":24},{"week":"Mar 01","sales":5809.0,"sessions":672,"orders":33},{"week":"Mar 08","sales":4551.0,"sessions":740,"orders":33},{"week":"Mar 15","sales":3892.0,"sessions":636,"orders":33},{"week":"Mar 22","sales":5132.0,"sessions":724,"orders":46},{"week":"Mar 29","sales":6652.0,"sessions":1552,"orders":45},{"week":"Apr 05","sales":7187.0,"sessions":3913,"orders":61},{"week":"Apr 12","sales":9913.0,"sessions":5028,"orders":82},{"week":"Apr 19","sales":42512.0,"sessions":5794,"orders":264},{"week":"Apr 26","sales":89168.0,"sessions":5838,"orders":544},{"week":"May 03","sales":68281.0,"sessions":5779,"orders":482}],"Meta Paid":[{"week":"Feb 01","sales":26125.0,"sessions":44610,"orders":197},{"week":"Feb 08","sales":22862.0,"sessions":34363,"orders":155},{"week":"Feb 15","sales":12817.0,"sessions":37536,"orders":109},{"week":"Feb 22","sales":25224.0,"sessions":48983,"orders":178},{"week":"Mar 01","sales":26023.0,"sessions":50021,"orders":196},{"week":"Mar 08","sales":26131.0,"sessions":52780,"orders":200},{"week":"Mar 15","sales":24617.0,"sessions":63259,"orders":172},{"week":"Mar 22","sales":29205.0,"sessions":58940,"orders":204},{"week":"Mar 29","sales":25716.0,"sessions":52059,"orders":182},{"week":"Apr 05","sales":20217.0,"sessions":41465,"orders":154},{"week":"Apr 12","sales":20579.0,"sessions":44886,"orders":153},{"week":"Apr 19","sales":26700.0,"sessions":57190,"orders":178},{"week":"Apr 26","sales":22832.0,"sessions":59511,"orders":166},{"week":"May 03","sales":18120.0,"sessions":52118,"orders":152}],"SMS (Attentive)":[{"week":"Feb 01","sales":63290.0,"sessions":4763,"orders":516},{"week":"Feb 08","sales":74723.0,"sessions":5084,"orders":562},{"week":"Feb 15","sales":52849.0,"sessions":3806,"orders":452},{"week":"Feb 22","sales":61463.0,"sessions":4010,"orders":477},{"week":"Mar 01","sales":59336.0,"sessions":3652,"orders":453},{"week":"Mar 08","sales":49648.0,"sessions":4360,"orders":408},{"week":"Mar 15","sales":17980.0,"sessions":2090,"orders":171},{"week":"Mar 22","sales":19704.0,"sessions":2052,"orders":170},{"week":"Mar 29","sales":2497.0,"sessions":883,"orders":54},{"week":"Apr 05","sales":2840.0,"sessions":1567,"orders":40},{"week":"Apr 12","sales":18515.0,"sessions":1687,"orders":149},{"week":"Apr 19","sales":33009.0,"sessions":1388,"orders":241},{"week":"Apr 26","sales":28749.0,"sessions":1022,"orders":204},{"week":"May 03","sales":27285.0,"sessions":1318,"orders":202}]},"weekly_channels_x":["Feb 01","Feb 08","Feb 15","Feb 22","Mar 01","Mar 08","Mar 15","Mar 22","Mar 29","Apr 05","Apr 12","Apr 19","Apr 26","May 03"],"emerging":{"Pinterest Paid":[{"week":"Feb 01","sessions":2,"sales":0.0,"orders":0},{"week":"Feb 08","sessions":1,"sales":0.0,"orders":0},{"week":"Feb 15","sessions":2,"sales":0.0,"orders":0},{"week":"Feb 22","sessions":2,"sales":0.0,"orders":0},{"week":"Mar 01","sessions":2,"sales":0.0,"orders":0},{"week":"Mar 08","sessions":2,"sales":0.0,"orders":0},{"week":"Mar 29","sessions":3,"sales":146.0,"orders":1},{"week":"Apr 12","sessions":33,"sales":0.0,"orders":0},{"week":"Apr 19","sessions":1140,"sales":0.0,"orders":0},{"week":"Apr 26","sessions":1946,"sales":0.0,"orders":0},{"week":"May 03","sessions":164,"sales":0.0,"orders":0}],"Pinterest Organic":[{"week":"Feb 01","sessions":679,"sales":270.0,"orders":6},{"week":"Feb 08","sessions":786,"sales":201.0,"orders":2},{"week":"Feb 15","sessions":893,"sales":0.0,"orders":0},{"week":"Feb 22","sessions":833,"sales":231.0,"orders":1},{"week":"Mar 01","sessions":792,"sales":1008.0,"orders":5},{"week":"Mar 08","sessions":945,"sales":0.0,"orders":0},{"week":"Mar 15","sessions":1120,"sales":-132.0,"orders":4},{"week":"Mar 22","sessions":844,"sales":636.0,"orders":5},{"week":"Mar 29","sessions":757,"sales":160.0,"orders":3},{"week":"Apr 05","sessions":710,"sales":754.0,"orders":6},{"week":"Apr 12","sessions":784,"sales":-11.0,"orders":2},{"week":"Apr 19","sessions":726,"sales":210.0,"orders":2},{"week":"Apr 26","sessions":697,"sales":376.0,"orders":4},{"week":"May 03","sessions":676,"sales":15.0,"orders":2}],"Reddit":[{"week":"Feb 01","sessions":3,"sales":0.0,"orders":0},{"week":"Feb 08","sessions":6,"sales":0.0,"orders":0},{"week":"Feb 15","sessions":25,"sales":0.0,"orders":0},{"week":"Feb 22","sessions":33,"sales":0.0,"orders":0},{"week":"Mar 01","sessions":76,"sales":266.0,"orders":1},{"week":"Mar 08","sessions":140,"sales":531.0,"orders":2},{"week":"Mar 15","sessions":72,"sales":0.0,"orders":0},{"week":"Mar 22","sessions":18,"sales":0.0,"orders":0},{"week":"Mar 29","sessions":10,"sales":0.0,"orders":0},{"week":"Apr 05","sessions":14,"sales":0.0,"orders":0},{"week":"Apr 12","sessions":59,"sales":0.0,"orders":0},{"week":"Apr 19","sessions":555,"sales":0.0,"orders":0},{"week":"Apr 26","sessions":679,"sales":0.0,"orders":0},{"week":"May 03","sessions":187,"sales":0.0,"orders":0}],"TikTok":[{"week":"Feb 01","sessions":8,"sales":0.0,"orders":0},{"week":"Feb 08","sessions":9,"sales":0.0,"orders":0},{"week":"Feb 15","sessions":8,"sales":0.0,"orders":0},{"week":"Feb 22","sessions":9,"sales":0.0,"orders":0},{"week":"Mar 01","sessions":6,"sales":0.0,"orders":0},{"week":"Mar 08","sessions":9213,"sales":247.0,"orders":2},{"week":"Mar 15","sessions":12460,"sales":260.0,"orders":1},{"week":"Mar 22","sessions":5577,"sales":150.0,"orders":2},{"week":"Mar 29","sessions":140,"sales":0.0,"orders":0},{"week":"Apr 05","sessions":757,"sales":-94.0,"orders":0},{"week":"Apr 12","sessions":3159,"sales":0.0,"orders":0},{"week":"Apr 19","sessions":1000,"sales":0.0,"orders":0},{"week":"Apr 26","sessions":109,"sales":0.0,"orders":0},{"week":"May 03","sessions":1801,"sales":0.0,"orders":0}],"AI Search":[{"week":"Feb 01","sessions":671,"sales":1310.0,"orders":9},{"week":"Feb 08","sessions":693,"sales":1236.0,"orders":8},{"week":"Feb 15","sessions":698,"sales":654.0,"orders":9},{"week":"Feb 22","sessions":604,"sales":362.0,"orders":6},{"week":"Mar 01","sessions":689,"sales":1700.0,"orders":12},{"week":"Mar 08","sessions":850,"sales":1455.0,"orders":15},{"week":"Mar 15","sessions":895,"sales":1339.0,"orders":11},{"week":"Mar 22","sessions":892,"sales":1903.0,"orders":14},{"week":"Mar 29","sessions":826,"sales":1453.0,"orders":9},{"week":"Apr 05","sessions":824,"sales":1038.0,"orders":12},{"week":"Apr 12","sessions":868,"sales":2124.0,"orders":14},{"week":"Apr 19","sessions":959,"sales":3563.0,"orders":25},{"week":"Apr 26","sessions":992,"sales":1680.0,"orders":15},{"week":"May 03","sessions":1381,"sales":734.0,"orders":12}]},"top8_channels":["Google Paid","Google Organic","Affiliate/Coupon","BNPL Apps","Email (Klaviyo)","Shop App / Shopify","Meta Paid","SMS (Attentive)"],"top_codes_lw":[]};
+const TRADE = {"trends":[{"week":"W1","date":"Feb 01","net_sales":1309445.0,"budget_ca":1127285.0,"var_ca":182160.0,"var_pct_ca":16.2,"sessions":536236,"cvr":1.81,"margin_pct":35.1,"full_price_share":33.5,"markdown_share":66.5,"discounted_orders":2640,"orders":10312,"discount_usage_pct":25.6,"footwear":980441.0,"apparel":272300.0,"accessories":57300.0},{"week":"W2","date":"Feb 08","net_sales":1393863.0,"budget_ca":1318402.0,"var_ca":75461.0,"var_pct_ca":5.7,"sessions":530787,"cvr":1.91,"margin_pct":34.5,"full_price_share":33.0,"markdown_share":67.0,"discounted_orders":2808,"orders":10718,"discount_usage_pct":26.2,"footwear":1065469.0,"apparel":281032.0,"accessories":47504.0},{"week":"W3","date":"Feb 15","net_sales":1259770.0,"budget_ca":1172039.0,"var_ca":87730.0,"var_pct_ca":7.5,"sessions":513706,"cvr":1.76,"margin_pct":34.7,"full_price_share":30.6,"markdown_share":69.4,"discounted_orders":2612,"orders":9637,"discount_usage_pct":27.1,"footwear":990057.0,"apparel":223903.0,"accessories":46035.0},{"week":"W4","date":"Feb 22","net_sales":1493305.0,"budget_ca":1132274.0,"var_ca":361031.0,"var_pct_ca":31.9,"sessions":545069,"cvr":1.74,"margin_pct":36.4,"full_price_share":34.4,"markdown_share":65.6,"discounted_orders":2673,"orders":11307,"discount_usage_pct":23.64,"footwear":1168811.0,"apparel":279336.0,"accessories":44808.0},{"week":"W5","date":"Mar 01","net_sales":1629934.0,"budget_ca":1220122.0,"var_ca":409812.0,"var_pct_ca":33.6,"sessions":555801,"cvr":1.81,"margin_pct":39.0,"full_price_share":49.2,"markdown_share":50.8,"discounted_orders":2493,"orders":11006,"discount_usage_pct":22.65,"footwear":1360487.0,"apparel":223737.0,"accessories":45711.0},{"week":"W6","date":"Mar 08","net_sales":1515582.0,"budget_ca":1035522.0,"var_ca":480061.0,"var_pct_ca":62.1,"sessions":574395,"cvr":1.75,"margin_pct":33.4,"full_price_share":36.1,"markdown_share":63.9,"discounted_orders":2591,"orders":10927,"discount_usage_pct":23.71,"footwear":1235561.0,"apparel":238131.0,"accessories":41890.0},{"week":"W7","date":"Mar 15","net_sales":1220501.0,"budget_ca":1111835.0,"var_ca":108666.0,"var_pct_ca":9.8,"sessions":557865,"cvr":1.52,"margin_pct":36.1,"full_price_share":44.8,"markdown_share":55.2,"discounted_orders":1487,"orders":9182,"discount_usage_pct":16.19,"footwear":953512.0,"apparel":223118.0,"accessories":43871.0},{"week":"W8","date":"Mar 22","net_sales":1275401.0,"budget_ca":1126660.0,"var_ca":148741.0,"var_pct_ca":13.2,"sessions":532957,"cvr":1.53,"margin_pct":37.3,"full_price_share":47.0,"markdown_share":53.0,"discounted_orders":1483,"orders":8836,"discount_usage_pct":16.78,"footwear":1015113.0,"apparel":214881.0,"accessories":45408.0},{"week":"W9","date":"Mar 29","net_sales":1170618.0,"budget_ca":1037478.0,"var_ca":133141.0,"var_pct_ca":12.8,"sessions":519510,"cvr":1.48,"margin_pct":38.2,"full_price_share":47.0,"markdown_share":53.0,"discounted_orders":1073,"orders":8345,"discount_usage_pct":12.86,"footwear":942796.0,"apparel":190498.0,"accessories":37324.0},{"week":"W10","date":"Apr 05","net_sales":1202114.0,"budget_ca":1091655.0,"var_ca":110459.0,"var_pct_ca":10.1,"sessions":483466,"cvr":1.6,"margin_pct":38.3,"full_price_share":50.0,"markdown_share":50.0,"discounted_orders":795,"orders":8300,"discount_usage_pct":9.58,"footwear":992561.0,"apparel":173182.0,"accessories":36371.0},{"week":"W11","date":"Apr 12","net_sales":1383888.0,"budget_ca":1088746.0,"var_ca":295142.0,"var_pct_ca":27.1,"sessions":520679,"cvr":1.81,"margin_pct":36.8,"full_price_share":42.0,"markdown_share":58.0,"discounted_orders":1200,"orders":10157,"discount_usage_pct":11.81,"footwear":1157520.0,"apparel":186815.0,"accessories":39553.0},{"week":"W12","date":"Apr 19","net_sales":1510621.0,"budget_ca":1223566.0,"var_ca":287055.0,"var_pct_ca":23.5,"sessions":570432,"cvr":1.76,"margin_pct":37.2,"full_price_share":42.0,"markdown_share":58.0,"discounted_orders":1510,"orders":10745,"discount_usage_pct":14.05,"footwear":1280440.0,"apparel":188649.0,"accessories":41532.0},{"week":"W13","date":"Apr 26","net_sales":1392580.0,"budget_ca":1451318.0,"var_ca":-58738.0,"var_pct_ca":-4.0,"sessions":553721,"cvr":1.71,"margin_pct":38.3,"full_price_share":47.0,"markdown_share":53.0,"discounted_orders":1416,"orders":10168,"discount_usage_pct":13.93,"footwear":1182648.0,"apparel":170965.0,"accessories":38967.0},{"week":"W14","date":"May 03","net_sales":1400183.0,"budget_ca":1471954.0,"var_ca":-71771.0,"var_pct_ca":-4.9,"sessions":544161,"cvr":1.68,"margin_pct":39.1,"full_price_share":48.0,"markdown_share":52.0,"discounted_orders":1324,"orders":9731,"discount_usage_pct":13.61,"footwear":1156548.0,"apparel":204568.0,"accessories":39067.0}],"full_price_target":48.43608131,"jesta_categories":[{"category":"Footwear","net_sales":1156547.8,"budget":1179935.0,"diff":-23387.2,"var_pct":-1.982075284,"share":82.59977374,"yoy_pct":41.834438899999995,"previous_year":815421.0},{"category":"Apparel","net_sales":204568.2,"budget":242906.0,"diff":-38337.8,"var_pct":-15.78297778,"share":14.610106940000001,"yoy_pct":5.764273417,"previous_year":193419.0},{"category":"Accessories","net_sales":39066.77,"budget":49113.0,"diff":-10046.23,"var_pct":-20.45533769,"share":2.790119321,"yoy_pct":49.97416408,"previous_year":26049.0},{"category":"Total","net_sales":1400182.77,"budget":1471954.0,"diff":-71771.23,"var_pct":-4.87591528,"share":100.0,"yoy_pct":35.29786963,"previous_year":1034889.0}],"shopify_kpis":[{"kpi":"Sessions","last_week":544161.0,"budget":676329.0,"var":-132168.0,"var_pct":-19.541968479999998,"last_year":null,"yoy_pct":null},{"kpi":"Conversion","last_week":0.0168,"budget":0.0172,"var":-0.0004,"var_pct":-2.325581395,"last_year":null,"yoy_pct":null},{"kpi":"AOV","last_week":148.68,"budget":150.1,"var":-1.42,"var_pct":-0.946035976,"last_year":null,"yoy_pct":null}],"regions":[{"region":"British Columbia","sessions_lw":68004.0,"sessions_pw":72578.0,"sessions_wow":-6.3021852350000005,"sessions_yoy":21.044481230000002,"cvr_lw":1.6057879000000002,"cvr_pw":1.6671719,"cvr_wow":-3.681923862,"cvr_yoy":12.627679389999999,"aov_lw":144.4992927,"aov_pw":144.61099364069952,"aov_wow":-0.07724238422,"aov_yoy":-2.4338256329999997,"net_sales_lw":118815.23,"net_sales_pw":141204.32,"net_sales_wow":-15.85581093,"net_sales_yoy":-1.706968951,"footwear_lw":98408.94,"footwear_share":null,"apparel_lw":16122.71,"apparel_share":null,"accessories_lw":4324.58,"accessories_share":null},{"region":"Prairies","sessions_lw":79597.0,"sessions_pw":85385.0,"sessions_wow":-6.778708204,"sessions_yoy":13.43451618,"cvr_lw":1.522670452,"cvr_pw":1.7099022076477133,"cvr_wow":-10.94985166,"cvr_yoy":4.341587544,"aov_lw":155.1429182,"aov_pw":152.47836999435987,"aov_wow":1.7474925780000001,"aov_yoy":1.722813029,"net_sales_lw":203660.73,"net_sales_pw":221942.91000000003,"net_sales_wow":-8.237334547,"net_sales_yoy":27.772212940000003,"footwear_lw":171505.76,"footwear_share":null,"apparel_lw":24713.44,"apparel_share":null,"accessories_lw":6008.54,"accessories_share":null},{"region":"Ontario","sessions_lw":201388.0,"sessions_pw":239956.0,"sessions_wow":-16.07294671,"sessions_yoy":4.463025977,"cvr_lw":1.6505452,"cvr_pw":1.6982279999999998,"cvr_wow":-2.8077973039999997,"cvr_yoy":7.681453775,"aov_lw":148.7662366,"aov_pw":148.00171896631286,"aov_wow":0.5165599921,"aov_yoy":-0.49094496070000004,"net_sales_lw":493245.17,"net_sales_pw":513053.85,"net_sales_wow":-3.8609358449999998,"net_sales_yoy":16.91508729,"footwear_lw":392435.83,"footwear_share":null,"apparel_lw":86459.68,"apparel_share":null,"accessories_lw":13817.71,"accessories_share":null},{"region":"Quebec & Atlantic","sessions_lw":107356.0,"sessions_pw":129448.0,"sessions_wow":-17.06631234,"sessions_yoy":18.73562201,"cvr_lw":1.845262491,"cvr_pw":2.034793894073296,"cvr_wow":-9.314525834,"cvr_yoy":7.639518323,"aov_lw":146.3652444,"aov_pw":147.0334106314663,"aov_wow":-0.45443159330000005,"aov_yoy":2.720950297,"net_sales_lw":306401.38,"net_sales_pw":338250.27999999997,"net_sales_wow":-9.415779345,"net_sales_yoy":41.38234209,"footwear_lw":248315.68,"footwear_share":null,"apparel_lw":42204.67,"apparel_share":null,"accessories_lw":10978.61,"accessories_share":null}],"provinces":[{"province":"Ontario","sessions_lw":201388.0,"completed_lw":3324.0,"cvr_lw":1.6505452,"sessions_py":192784.0,"cvr_py":1.5328036,"sessions_yoy":4.463025977259524,"cvr_yoy":7.681453775291241},{"province":"Quebec","sessions_lw":94999.0,"completed_lw":1757.0,"cvr_lw":1.8494932,"sessions_py":78670.0,"cvr_py":1.6906062999999998,"sessions_yoy":20.756323884581164,"cvr_yoy":9.398220035025304},{"province":"British Columbia","sessions_lw":68004.0,"completed_lw":1092.0,"cvr_lw":1.6057879000000002,"sessions_py":56181.0,"cvr_py":1.4257489,"sessions_yoy":21.044481230309177,"cvr_yoy":12.6276793901086},{"province":"Alberta","sessions_lw":54828.0,"completed_lw":875.0,"cvr_lw":1.5958999,"sessions_py":49647.0,"cvr_py":1.4079401,"sessions_yoy":10.435675871653876,"cvr_yoy":13.349985556913973},{"province":"Manitoba","sessions_lw":15056.0,"completed_lw":198.0,"cvr_lw":1.3150903,"sessions_py":13634.0,"cvr_py":1.4229133,"sessions_yoy":10.429807833357781,"cvr_yoy":-7.5776226141114815},{"province":"Saskatchewan","sessions_lw":9713.0,"completed_lw":139.0,"cvr_lw":1.4310718,"sessions_py":6889.0,"cvr_py":1.9015822000000002,"sessions_yoy":40.99288721149659,"cvr_yoy":-24.7431007715575},{"province":"Nova Scotia","sessions_lw":6626.0,"completed_lw":113.0,"cvr_lw":1.7054030000000002,"sessions_py":6279.0,"cvr_py":1.8315017999999998,"sessions_yoy":5.526357700270744,"cvr_yoy":-6.884994598421894},{"province":"New Brunswick","sessions_lw":3562.0,"completed_lw":69.0,"cvr_lw":1.9371139999999998,"sessions_py":3179.0,"cvr_py":1.9502987999999999,"sessions_yoy":12.047813777917584,"cvr_yoy":-0.6760399996144201},{"province":"Newfoundland and Labrador","sessions_lw":1506.0,"completed_lw":28.0,"cvr_lw":1.8592297,"sessions_py":1298.0,"cvr_py":1.3097071999999998,"sessions_yoy":16.024653312788907,"cvr_yoy":41.9576604602922},{"province":"Prince Edward Island","sessions_lw":663.0,"completed_lw":14.0,"cvr_lw":2.1116139,"sessions_py":990.0,"cvr_py":2.6262626,"sessions_yoy":-33.03030303030303,"cvr_yoy":-19.596239157500857},{"province":"Yukon","sessions_lw":167.0,"completed_lw":0.0,"cvr_lw":0.0,"sessions_py":457.0,"cvr_py":0.8752734999999999,"sessions_yoy":-63.45733041575492,"cvr_yoy":-100.0},{"province":"Northwest Territories","sessions_lw":166.0,"completed_lw":1.0,"cvr_lw":0.6024096,"sessions_py":208.0,"cvr_py":1.9230769,"sessions_yoy":-20.192307692307693,"cvr_yoy":-68.67470042409641},{"province":"Nunavut","sessions_lw":46.0,"completed_lw":1.0,"cvr_lw":2.1739129999999998,"sessions_py":6.0,"cvr_py":0.0,"sessions_yoy":666.6666666666667,"cvr_yoy":null}],"province_sales":[{"region":"Ontario","province":"Ontario","aov":148.766,"gross_sales":649577.0,"discounts":-9584.65,"orders":4302,"net_sales":493245.17,"aov_py":149.5},{"region":"Quebec & Atlantic","province":"Quebec","aov":146.034,"gross_sales":343288.0,"discounts":-3319.65,"orders":2328,"net_sales":264296.54,"aov_py":142.039},{"region":"Prairies","province":"Alberta","aov":153.639,"gross_sales":174931.0,"discounts":-3315.75,"orders":1117,"net_sales":134877.47,"aov_py":153.598},{"region":"British Columbia","province":"British Columbia","aov":144.499,"gross_sales":167700.0,"discounts":-4271.3,"orders":1131,"net_sales":118815.23,"aov_py":148.103},{"region":"Prairies","province":"Manitoba","aov":154.805,"gross_sales":46275.0,"discounts":-452.5,"orders":296,"net_sales":35812.61,"aov_py":143.021},{"region":"Prairies","province":"Saskatchewan","aov":163.05,"gross_sales":37508.0,"discounts":-821.65,"orders":225,"net_sales":32970.65,"aov_py":160.898},{"region":"Quebec & Atlantic","province":"Nova Scotia","aov":142.85,"gross_sales":23911.0,"discounts":-197.8,"orders":166,"net_sales":20884.0,"aov_py":142.635},{"region":"Quebec & Atlantic","province":"New Brunswick","aov":150.972,"gross_sales":16601.0,"discounts":-145.0,"orders":109,"net_sales":13326.84,"aov_py":143.415},{"region":"Quebec & Atlantic","province":"Newfoundland and Labrador","aov":191.147,"gross_sales":6519.0,"discounts":-20.0,"orders":34,"net_sales":5644.0,"aov_py":160.571},{"region":"Quebec & Atlantic","province":"Prince Edward Island","aov":117.173,"gross_sales":2725.0,"discounts":-30.0,"orders":23,"net_sales":2250.0,"aov_py":132.608}],"forecasted_run_rate":1347059.556,"mtd":[{"week":"Wk 11","net_sales":1383888.0,"budget":1088746.0,"var":295142.0,"var_pct":27.108434841551656},{"week":"Wk 12","net_sales":1510621.0,"budget":1223566.0,"var":287055.0,"var_pct":23.460524401626067},{"week":"Wk 13","net_sales":1392580.0,"budget":1451318.0,"var":-58738.0,"var_pct":-4.047217770330142},{"week":"Wk 14","net_sales":1400182.77,"budget":1471954.0,"var":-71771.22999999998,"var_pct":-4.875915279961193}],"mtd_total":{"week":"MTD Total (W11-W14)","net_sales":5687271.77,"budget":5235584.0,"var":451687.76999999955,"var_pct":8.627266222832057},"current_week":"W14","current_week_label":"W14 (May 3 \u2013 May 9)","prev_week_label":"W13","next_week_budget":1500000,"w14_summary":{"net_sales":1400182.77,"net_sales_w13":1392580.0,"net_sales_wow_pct":0.5459485271941302,"budget":1471954.0,"var_pct":-4.87591528,"sessions":544161,"cvr":1.68,"cvr_w13":1.71,"cvr_wow_pct":-1.7543859649122904,"margin_pct":39.1,"margin_w13":38.3,"margin_pts_wow":0.8000000000000007,"markdown_share":52.0,"full_price_share":48.0,"full_price_share_w13":47.0,"discount_usage_pct":13.606001440000002,"discount_usage_w13":13.92604249,"orders":9731,"orders_w13":10168}};
+const LP = {"top_pages":[{"path":"/products/adidas-womens-samba-jane-white-alumina-core-black","sessions_lw":4171,"sessions_pw":2137,"sessions_wow":95.2,"cvr_lw":4.12,"cvr_pw":1.08,"atc_rate_lw":11.94,"comp_lw":172,"comp_wow":647.8},{"path":"/products/jordan-1-retro-low-og-banned-black-varsity-red","sessions_lw":4150,"sessions_pw":1779,"sessions_wow":133.3,"cvr_lw":1.66,"cvr_pw":2.42,"atc_rate_lw":7.35,"comp_lw":69,"comp_wow":60.5},{"path":"/products/new-balance-530-white-natural-indigo","sessions_lw":2823,"sessions_pw":2871,"sessions_wow":-1.7,"cvr_lw":1.06,"cvr_pw":0.94,"atc_rate_lw":6.48,"comp_lw":30,"comp_wow":11.1},{"path":"/products/puma-womens-speedcat-ballet-venus-jasmine-flower-warm-white","sessions_lw":2563,"sessions_pw":2277,"sessions_wow":12.6,"cvr_lw":1.33,"cvr_pw":1.1,"atc_rate_lw":6.94,"comp_lw":34,"comp_wow":36.0},{"path":"/products/adidas-womens-samba-jane-black-off-white-gold-metallic","sessions_lw":2475,"sessions_pw":1864,"sessions_wow":32.8,"cvr_lw":0.89,"cvr_pw":1.34,"atc_rate_lw":4.57,"comp_lw":22,"comp_wow":-12.0},{"path":"/products/adidas-womens-muenchen-wonder-mauve-off-white-silver-metallic","sessions_lw":2424,"sessions_pw":3169,"sessions_wow":-23.5,"cvr_lw":1.57,"cvr_pw":1.96,"atc_rate_lw":12.21,"comp_lw":38,"comp_wow":-38.7},{"path":"/products/nike-air-force-1-07-white-white-white","sessions_lw":2227,"sessions_pw":1878,"sessions_wow":18.6,"cvr_lw":1.53,"cvr_pw":2.24,"atc_rate_lw":8.58,"comp_lw":34,"comp_wow":-19.0},{"path":"/products/nike-womens-air-force-1-white-white-playful-pink","sessions_lw":2006,"sessions_pw":1719,"sessions_wow":16.7,"cvr_lw":1.05,"cvr_pw":1.22,"atc_rate_lw":6.53,"comp_lw":21,"comp_wow":0.0},{"path":"/products/nike-air-force-1-black-black-dark-smoke-grey","sessions_lw":1875,"sessions_pw":2115,"sessions_wow":-11.3,"cvr_lw":1.17,"cvr_pw":1.47,"atc_rate_lw":6.67,"comp_lw":22,"comp_wow":-29.0},{"path":"/products/asics-gel-ds-trainer-14-cream-fossil","sessions_lw":1859,"sessions_pw":2655,"sessions_wow":-30.0,"cvr_lw":0.97,"cvr_pw":0.9,"atc_rate_lw":7.64,"comp_lw":18,"comp_wow":-25.0},{"path":"/products/salomon-xt-6-earth-brown-walnut-silver","sessions_lw":1855,"sessions_pw":1693,"sessions_wow":9.6,"cvr_lw":1.24,"cvr_pw":2.3,"atc_rate_lw":5.28,"comp_lw":23,"comp_wow":-41.0},{"path":"/products/nike-air-max-90-black-buff-gold-anthracite","sessions_lw":1654,"sessions_pw":917,"sessions_wow":80.4,"cvr_lw":1.09,"cvr_pw":1.31,"atc_rate_lw":5.68,"comp_lw":18,"comp_wow":50.0},{"path":"/products/adidas-samba-og-aluminum-white-gum","sessions_lw":1628,"sessions_pw":1986,"sessions_wow":-18.0,"cvr_lw":1.29,"cvr_pw":1.36,"atc_rate_lw":7.06,"comp_lw":21,"comp_wow":-22.2},{"path":"/products/adidas-womens-handball-spezial-cream-white-earth-strata-gum","sessions_lw":1516,"sessions_pw":1224,"sessions_wow":23.9,"cvr_lw":0.46,"cvr_pw":0.9,"atc_rate_lw":4.62,"comp_lw":7,"comp_wow":-36.4},{"path":"/products/new-balance-9060-cortado-linen","sessions_lw":1495,"sessions_pw":2157,"sessions_wow":-30.7,"cvr_lw":1.14,"cvr_pw":1.39,"atc_rate_lw":5.82,"comp_lw":17,"comp_wow":-43.3},{"path":"/products/nike-womens-air-rift-breathe-black-black-white","sessions_lw":1480,"sessions_pw":1084,"sessions_wow":36.5,"cvr_lw":1.55,"cvr_pw":1.94,"atc_rate_lw":7.03,"comp_lw":23,"comp_wow":9.5},{"path":"/products/nike-calm-2-0-slides-black-black","sessions_lw":1310,"sessions_pw":1204,"sessions_wow":8.8,"cvr_lw":1.37,"cvr_pw":1.0,"atc_rate_lw":7.63,"comp_lw":18,"comp_wow":50.0},{"path":"/products/nike-womens-air-force-1-07-sail-silt-red-sail","sessions_lw":1297,"sessions_pw":1051,"sessions_wow":23.4,"cvr_lw":0.85,"cvr_pw":1.33,"atc_rate_lw":5.01,"comp_lw":11,"comp_wow":-21.4},{"path":"/products/salomon-xt-6-rainy-day-black-white","sessions_lw":1294,"sessions_pw":1358,"sessions_wow":-4.7,"cvr_lw":1.31,"cvr_pw":1.03,"atc_rate_lw":5.8,"comp_lw":17,"comp_wow":21.4},{"path":"/products/new-balance-juniors-9060-shipyard-linen","sessions_lw":1221,"sessions_pw":567,"sessions_wow":115.3,"cvr_lw":1.72,"cvr_pw":3.0,"atc_rate_lw":9.34,"comp_lw":21,"comp_wow":23.5},{"path":"/products/air-jordan-4-retro-og-flight-club-sail-black-university-red","sessions_lw":1151,"sessions_pw":1371,"sessions_wow":-16.0,"cvr_lw":0.61,"cvr_pw":0.36,"atc_rate_lw":4.87,"comp_lw":7,"comp_wow":40.0},{"path":"/products/nike-p-6000-metallic-silver-sail","sessions_lw":1062,"sessions_pw":860,"sessions_wow":23.5,"cvr_lw":0.85,"cvr_pw":0.47,"atc_rate_lw":4.61,"comp_lw":9,"comp_wow":125.0},{"path":"/products/new-balance-juniors-9060-white-white","sessions_lw":954,"sessions_pw":781,"sessions_wow":22.2,"cvr_lw":1.05,"cvr_pw":1.41,"atc_rate_lw":6.81,"comp_lw":10,"comp_wow":-9.1},{"path":"/products/nike-womens-dunk-low-white-black-white","sessions_lw":949,"sessions_pw":1296,"sessions_wow":-26.8,"cvr_lw":1.58,"cvr_pw":1.23,"atc_rate_lw":8.64,"comp_lw":15,"comp_wow":-6.2},{"path":"/products/jd-asics-gel-nyc-black-graphite-grey","sessions_lw":946,"sessions_pw":958,"sessions_wow":-1.3,"cvr_lw":1.06,"cvr_pw":0.63,"atc_rate_lw":4.97,"comp_lw":10,"comp_wow":66.7}],"gainers":[{"path":"/products/jordan-1-retro-low-og-banned-black-varsity-red","sessions_lw":4150,"sessions_pw":1779,"delta":2371,"cvr_lw":1.66},{"path":"/products/adidas-womens-samba-jane-white-alumina-core-black","sessions_lw":4171,"sessions_pw":2137,"delta":2034,"cvr_lw":4.12},{"path":"/products/nike-air-dt-max-96-low-black-gold","sessions_lw":941,"sessions_pw":199,"delta":742,"cvr_lw":1.59},{"path":"/products/nike-air-max-90-black-buff-gold-anthracite","sessions_lw":1654,"sessions_pw":917,"delta":737,"cvr_lw":1.09},{"path":"/products/new-balance-juniors-9060-shipyard-linen","sessions_lw":1221,"sessions_pw":567,"delta":654,"cvr_lw":1.72},{"path":"/products/new-balance-mens-740-burgundy-white","sessions_lw":928,"sessions_pw":276,"delta":652,"cvr_lw":0.22},{"path":"/products/adidas-womens-samba-jane-black-off-white-gold-metallic","sessions_lw":2475,"sessions_pw":1864,"delta":611,"cvr_lw":0.89},{"path":"/products/nike-womens-air-force-1-retro-pink-foam-pearl-pink-pink-foam","sessions_lw":653,"sessions_pw":102,"delta":551,"cvr_lw":1.38},{"path":"/products/ugg-womens-tasman-ii-rocky-oak","sessions_lw":605,"sessions_pw":75,"delta":530,"cvr_lw":3.64},{"path":"/products/asics-gel-1130-gs-white-clay-canyon","sessions_lw":770,"sessions_pw":288,"delta":482,"cvr_lw":0.78}],"decliners":[{"path":"/products/saucony-grid-jazz-9-wisteria-iron","sessions_lw":101,"sessions_pw":5628,"delta":-5527,"cvr_lw":0.0},{"path":"/products/new-balance-204l-mushroom-arid-stone","sessions_lw":450,"sessions_pw":5949,"delta":-5499,"cvr_lw":0.67},{"path":"/collections/mens-saucony/products/saucony-grid-jazz-9-cinder-black","sessions_lw":30,"sessions_pw":3122,"delta":-3092,"cvr_lw":0.0},{"path":"/products/new-balance-m1000-silver-metallic-black","sessions_lw":640,"sessions_pw":1855,"delta":-1215,"cvr_lw":1.41},{"path":"/products/adidas-evo-sl-solar-yellow-plum","sessions_lw":710,"sessions_pw":1715,"delta":-1005,"cvr_lw":1.83},{"path":"/products/asics-gel-ds-trainer-14-cream-fossil","sessions_lw":1859,"sessions_pw":2655,"delta":-796,"cvr_lw":0.97},{"path":"/products/adidas-womens-muenchen-wonder-mauve-off-white-silver-metallic","sessions_lw":2424,"sessions_pw":3169,"delta":-745,"cvr_lw":1.57},{"path":"/products/new-balance-9060-cortado-linen","sessions_lw":1495,"sessions_pw":2157,"delta":-662,"cvr_lw":1.14},{"path":"/products/jordan-5-retro-og-white-metallic-white-black","sessions_lw":821,"sessions_pw":1450,"delta":-629,"cvr_lw":0.73},{"path":"/products/adidas-juniors-samba-og-white-cloud-pink-gum","sessions_lw":232,"sessions_pw":850,"delta":-618,"cvr_lw":1.72}],"top_cvr":[{"path":"/products/adidas-womens-samba-jane-white-alumina-core-black","sessions_lw":4171,"cvr_lw":4.12,"comp_lw":172,"atc_rate_lw":11.94},{"path":"/products/new-balance-juniors-9060-shipyard-linen","sessions_lw":1221,"cvr_lw":1.72,"comp_lw":21,"atc_rate_lw":9.34},{"path":"/products/jordan-1-retro-low-og-banned-black-varsity-red","sessions_lw":4150,"cvr_lw":1.66,"comp_lw":69,"atc_rate_lw":7.35},{"path":"/products/adidas-womens-muenchen-wonder-mauve-off-white-silver-metallic","sessions_lw":2424,"cvr_lw":1.57,"comp_lw":38,"atc_rate_lw":12.21},{"path":"/products/nike-womens-air-rift-breathe-black-black-white","sessions_lw":1480,"cvr_lw":1.55,"comp_lw":23,"atc_rate_lw":7.03},{"path":"/products/nike-air-force-1-07-white-white-white","sessions_lw":2227,"cvr_lw":1.53,"comp_lw":34,"atc_rate_lw":8.58},{"path":"/products/nike-calm-2-0-slides-black-black","sessions_lw":1310,"cvr_lw":1.37,"comp_lw":18,"atc_rate_lw":7.63},{"path":"/products/puma-womens-speedcat-ballet-venus-jasmine-flower-warm-white","sessions_lw":2563,"cvr_lw":1.33,"comp_lw":34,"atc_rate_lw":6.94},{"path":"/products/salomon-xt-6-rainy-day-black-white","sessions_lw":1294,"cvr_lw":1.31,"comp_lw":17,"atc_rate_lw":5.8},{"path":"/products/adidas-samba-og-aluminum-white-gum","sessions_lw":1628,"cvr_lw":1.29,"comp_lw":21,"atc_rate_lw":7.06},{"path":"/products/salomon-xt-6-earth-brown-walnut-silver","sessions_lw":1855,"cvr_lw":1.24,"comp_lw":23,"atc_rate_lw":5.28},{"path":"/products/nike-air-force-1-black-black-dark-smoke-grey","sessions_lw":1875,"cvr_lw":1.17,"comp_lw":22,"atc_rate_lw":6.67},{"path":"/products/new-balance-9060-cortado-linen","sessions_lw":1495,"cvr_lw":1.14,"comp_lw":17,"atc_rate_lw":5.82},{"path":"/products/nike-air-max-90-black-buff-gold-anthracite","sessions_lw":1654,"cvr_lw":1.09,"comp_lw":18,"atc_rate_lw":5.68},{"path":"/products/new-balance-530-white-natural-indigo","sessions_lw":2823,"cvr_lw":1.06,"comp_lw":30,"atc_rate_lw":6.48}],"bottom_cvr":[{"path":"/products/adidas-womens-samba-jane-black-off-white-gold-metallic","sessions_lw":2475,"cvr_lw":0.89,"comp_lw":22,"atc_rate_lw":4.57},{"path":"/products/nike-womens-air-force-1-white-white-playful-pink","sessions_lw":2006,"cvr_lw":1.05,"comp_lw":21,"atc_rate_lw":6.53},{"path":"/products/new-balance-530-white-natural-indigo","sessions_lw":2823,"cvr_lw":1.06,"comp_lw":30,"atc_rate_lw":6.48},{"path":"/products/puma-womens-speedcat-ballet-venus-jasmine-flower-warm-white","sessions_lw":2563,"cvr_lw":1.33,"comp_lw":34,"atc_rate_lw":6.94},{"path":"/products/nike-air-force-1-07-white-white-white","sessions_lw":2227,"cvr_lw":1.53,"comp_lw":34,"atc_rate_lw":8.58},{"path":"/products/adidas-womens-muenchen-wonder-mauve-off-white-silver-metallic","sessions_lw":2424,"cvr_lw":1.57,"comp_lw":38,"atc_rate_lw":12.21},{"path":"/products/jordan-1-retro-low-og-banned-black-varsity-red","sessions_lw":4150,"cvr_lw":1.66,"comp_lw":69,"atc_rate_lw":7.35},{"path":"/products/adidas-womens-samba-jane-white-alumina-core-black","sessions_lw":4171,"cvr_lw":4.12,"comp_lw":172,"atc_rate_lw":11.94}],"weekly":[{"week":"Feb 01","sessions":300849,"comp":4537,"cvr":1.51,"atc_rate":8.61,"reach_rate":4.51},{"week":"Feb 08","sessions":299674,"comp":4641,"cvr":1.55,"atc_rate":8.81,"reach_rate":4.79},{"week":"Feb 15","sessions":282289,"comp":4122,"cvr":1.46,"atc_rate":8.29,"reach_rate":4.36},{"week":"Feb 22","sessions":301079,"comp":4253,"cvr":1.41,"atc_rate":8.18,"reach_rate":4.19},{"week":"Mar 01","sessions":309178,"comp":4383,"cvr":1.42,"atc_rate":7.79,"reach_rate":4.07},{"week":"Mar 08","sessions":323899,"comp":4548,"cvr":1.4,"atc_rate":7.73,"reach_rate":4.01},{"week":"Mar 15","sessions":298255,"comp":3707,"cvr":1.24,"atc_rate":7.29,"reach_rate":3.77},{"week":"Mar 22","sessions":286358,"comp":3563,"cvr":1.24,"atc_rate":7.49,"reach_rate":3.76},{"week":"Mar 29","sessions":269865,"comp":3367,"cvr":1.25,"atc_rate":7.41,"reach_rate":3.73},{"week":"Apr 05","sessions":264195,"comp":3502,"cvr":1.33,"atc_rate":7.4,"reach_rate":3.91},{"week":"Apr 12","sessions":290444,"comp":4371,"cvr":1.5,"atc_rate":7.79,"reach_rate":4.19},{"week":"Apr 19","sessions":331344,"comp":4880,"cvr":1.47,"atc_rate":7.65,"reach_rate":4.08},{"week":"Apr 26","sessions":312094,"comp":4287,"cvr":1.37,"atc_rate":7.42,"reach_rate":3.86},{"week":"May 03","sessions":312166,"comp":4373,"cvr":1.4,"atc_rate":7.63,"reach_rate":3.94}],"weekly_yoy":[{"week":"Feb 01","sessions":300849,"sessions_py":214197,"sessions_yoy":40.5,"cvr":1.51,"cvr_py":1.23,"comp_yoy":71.6},{"week":"Feb 08","sessions":299674,"sessions_py":256695,"sessions_yoy":16.7,"cvr":1.55,"cvr_py":1.2,"comp_yoy":51.1},{"week":"Feb 15","sessions":282289,"sessions_py":293695,"sessions_yoy":-3.9,"cvr":1.46,"cvr_py":1.06,"comp_yoy":32.3},{"week":"Feb 22","sessions":301079,"sessions_py":268901,"sessions_yoy":12.0,"cvr":1.41,"cvr_py":1.16,"comp_yoy":36.9},{"week":"Mar 01","sessions":309178,"sessions_py":293642,"sessions_yoy":5.3,"cvr":1.42,"cvr_py":1.13,"comp_yoy":31.8},{"week":"Mar 08","sessions":323899,"sessions_py":248365,"sessions_yoy":30.4,"cvr":1.4,"cvr_py":1.24,"comp_yoy":48.0},{"week":"Mar 15","sessions":298255,"sessions_py":257079,"sessions_yoy":16.0,"cvr":1.24,"cvr_py":1.25,"comp_yoy":15.8},{"week":"Mar 22","sessions":286358,"sessions_py":259357,"sessions_yoy":10.4,"cvr":1.24,"cvr_py":1.3,"comp_yoy":5.7},{"week":"Mar 29","sessions":269865,"sessions_py":249927,"sessions_yoy":8.0,"cvr":1.25,"cvr_py":1.14,"comp_yoy":17.9},{"week":"Apr 05","sessions":264195,"sessions_py":235056,"sessions_yoy":12.4,"cvr":1.33,"cvr_py":1.15,"comp_yoy":29.4},{"week":"Apr 12","sessions":290444,"sessions_py":232724,"sessions_yoy":24.8,"cvr":1.5,"cvr_py":1.2,"comp_yoy":56.4},{"week":"Apr 19","sessions":331344,"sessions_py":187864,"sessions_yoy":76.4,"cvr":1.47,"cvr_py":1.3,"comp_yoy":99.2},{"week":"Apr 26","sessions":312094,"sessions_py":213908,"sessions_yoy":45.9,"cvr":1.37,"cvr_py":1.41,"comp_yoy":42.5},{"week":"May 03","sessions":312166,"sessions_py":233581,"sessions_yoy":33.6,"cvr":1.4,"cvr_py":1.37,"comp_yoy":36.2}],"brands":[{"brand":"Nike","sessions_lw":102919,"sessions_pw":91231,"sessions_wow":12.8,"cvr_lw":1.36,"cvr_pw":1.48,"comp_lw":1395},{"brand":"Adidas","sessions_lw":59842,"sessions_pw":59373,"sessions_wow":0.8,"cvr_lw":1.69,"cvr_pw":1.65,"comp_lw":1012},{"brand":"New Balance","sessions_lw":35821,"sessions_pw":41288,"sessions_wow":-13.2,"cvr_lw":1.28,"cvr_pw":1.23,"comp_lw":458},{"brand":"Jordan","sessions_lw":33718,"sessions_pw":32357,"sessions_wow":4.2,"cvr_lw":1.36,"cvr_pw":1.42,"comp_lw":460},{"brand":"Other","sessions_lw":31571,"sessions_pw":32029,"sessions_wow":-1.4,"cvr_lw":1.31,"cvr_pw":1.19,"comp_lw":415},{"brand":"Asics","sessions_lw":13891,"sessions_pw":14360,"sessions_wow":-3.3,"cvr_lw":1.03,"cvr_pw":1.23,"comp_lw":143},{"brand":"On","sessions_lw":8410,"sessions_pw":9086,"sessions_wow":-7.4,"cvr_lw":1.12,"cvr_pw":0.79,"comp_lw":94},{"brand":"Puma","sessions_lw":8311,"sessions_pw":8024,"sessions_wow":3.6,"cvr_lw":1.58,"cvr_pw":1.47,"comp_lw":131},{"brand":"Salomon","sessions_lw":7251,"sessions_pw":7108,"sessions_wow":2.0,"cvr_lw":1.05,"cvr_pw":1.39,"comp_lw":76},{"brand":"Hoka","sessions_lw":5276,"sessions_pw":4456,"sessions_wow":18.4,"cvr_lw":1.48,"cvr_pw":1.53,"comp_lw":78},{"brand":"UGG","sessions_lw":2404,"sessions_pw":1342,"sessions_wow":79.1,"cvr_lw":2.91,"cvr_pw":1.64,"comp_lw":70},{"brand":"Saucony","sessions_lw":2267,"sessions_pw":10944,"sessions_wow":-79.3,"cvr_lw":1.72,"cvr_pw":0.49,"comp_lw":39},{"brand":"Timberland","sessions_lw":485,"sessions_pw":496,"sessions_wow":-2.2,"cvr_lw":0.41,"cvr_pw":1.21,"comp_lw":2}],"brands_yoy":[{"brand":"Nike","sessions_lw":102919,"sessions_py":92159,"sessions_yoy":11.7,"cvr_lw":1.36,"cvr_py":1.38,"comp_lw":1395,"comp_py":1271,"comp_yoy":9.8},{"brand":"Adidas","sessions_lw":59842,"sessions_py":32046,"sessions_yoy":86.7,"cvr_lw":1.69,"cvr_py":1.75,"comp_lw":1012,"comp_py":562,"comp_yoy":80.1},{"brand":"New Balance","sessions_lw":35821,"sessions_py":33769,"sessions_yoy":6.1,"cvr_lw":1.28,"cvr_py":1.45,"comp_lw":458,"comp_py":488,"comp_yoy":-6.1},{"brand":"Jordan","sessions_lw":33718,"sessions_py":25149,"sessions_yoy":34.1,"cvr_lw":1.36,"cvr_py":1.0,"comp_lw":460,"comp_py":252,"comp_yoy":82.5},{"brand":"Other","sessions_lw":31571,"sessions_py":22277,"sessions_yoy":41.7,"cvr_lw":1.31,"cvr_py":1.43,"comp_lw":415,"comp_py":318,"comp_yoy":30.5},{"brand":"Asics","sessions_lw":13891,"sessions_py":10168,"sessions_yoy":36.6,"cvr_lw":1.03,"cvr_py":1.14,"comp_lw":143,"comp_py":116,"comp_yoy":23.3},{"brand":"On","sessions_lw":8410,"sessions_py":7314,"sessions_yoy":15.0,"cvr_lw":1.12,"cvr_py":0.7,"comp_lw":94,"comp_py":51,"comp_yoy":84.3},{"brand":"Puma","sessions_lw":8311,"sessions_py":6399,"sessions_yoy":29.9,"cvr_lw":1.58,"cvr_py":1.73,"comp_lw":131,"comp_py":111,"comp_yoy":18.0},{"brand":"Salomon","sessions_lw":7251,"sessions_py":1505,"sessions_yoy":381.8,"cvr_lw":1.05,"cvr_py":0.86,"comp_lw":76,"comp_py":13,"comp_yoy":484.6},{"brand":"Hoka","sessions_lw":5276,"sessions_py":878,"sessions_yoy":500.9,"cvr_lw":1.48,"cvr_py":0.8,"comp_lw":78,"comp_py":7,"comp_yoy":1014.3},{"brand":"UGG","sessions_lw":2404,"sessions_py":714,"sessions_yoy":236.7,"cvr_lw":2.91,"cvr_py":1.4,"comp_lw":70,"comp_py":10,"comp_yoy":600.0},{"brand":"Saucony","sessions_lw":2267,"sessions_py":209,"sessions_yoy":984.7,"cvr_lw":1.72,"cvr_py":0.96,"comp_lw":39,"comp_py":2,"comp_yoy":1850.0},{"brand":"Timberland","sessions_lw":485,"sessions_py":994,"sessions_yoy":-51.2,"cvr_lw":0.41,"cvr_py":1.01,"comp_lw":2,"comp_py":10,"comp_yoy":-80.0}],"meta":{"total_pages":13718,"total_sessions_lw":312166,"total_sessions_pw":312094,"total_comp_lw":4373,"cvr_lw":1.4008572362140657,"cvr_pw":1.3736246130973362,"note":"Landing page export only contains Product page type (PDPs). Collection / homepage data not in scope."},"yoy_totals":{"LW":{"sessions":312166,"comp":4373,"atc":23808,"reach":12295,"unique_pages":9533,"cvr":1.4008572362140657},"PY":{"sessions":233581,"comp":3211,"atc":17829,"reach":8641,"unique_pages":4639,"cvr":1.374683728556689},"MTD":{"sessions":4181689,"comp":58534,"atc":327108,"reach":170849,"unique_pages":38124,"cvr":1.3997693276568393},"MTD_PY":{"sessions":3444991,"comp":41935,"atc":252105,"reach":125427,"unique_pages":16702,"cvr":1.2172745879452225}}};
+
+const YELLOW='#FFE000', GREEN='#4ade80', RED='#f87171', BLUE='#60a5fa', PINK='#f472b6', GREY='#71717a', GREY2='#52525b', BORDER='#262626';
+const fmtUSD=(v,dp=0)=>'$'+(v??0).toLocaleString('en-US',{maximumFractionDigits:dp,minimumFractionDigits:dp});
+const fmtUSDk=v=>v>=1000000?'$'+(v/1000000).toFixed(2)+'M':'$'+(v/1000).toFixed(0)+'k';
+const fmtNum=v=>(v??0).toLocaleString('en-US');
+const pctDelta=(a,b)=>b===0?null:((a-b)/b*100);
+function deltaHTML(value, suffix='%', invert=false) {
+  if (value===null || value===undefined || isNaN(value)) return '<span class="delta neutral">—</span>';
+  const positive=value>=0;
+  const isGood=invert?!positive:positive;
+  const cls=isGood?'up':'down';
+  return `<span class="delta ${cls}">${positive?'▲':'▼'} ${Math.abs(value).toFixed(1)}${suffix}</span>`;
+}
+function deltaPtsHTML(value, invert=false) {
+  if (value===null || value===undefined || isNaN(value)) return '<span class="delta neutral">—</span>';
+  const positive=value>=0;
+  const isGood=invert?!positive:positive;
+  return `<span class="delta ${isGood?'up':'down'}">${positive?'▲':'▼'} ${Math.abs(value).toFixed(2)} pts</span>`;
+}
+function kpiCard(label, value, lwValue, pwValue, pyValue, opts={}) {
+  const {prefix='', suffix='', dp=0, invert=false} = opts;
+  const wow = pctDelta(lwValue, pwValue);
+  const yoy = pyValue!==undefined && pyValue!==null ? pctDelta(lwValue, pyValue) : null;
+  const valueStr = typeof value==='number' ? value.toLocaleString('en-US',{maximumFractionDigits:dp, minimumFractionDigits:dp}) : value;
+  return `<div class="kpi-card">
+    <div class="kpi-label">${label}</div>
+    <div class="kpi-value">${prefix}${valueStr}${suffix}</div>
+    <div class="kpi-deltas">
+      <div><span class="delta-label">WoW</span>${deltaHTML(wow, '%', invert)}</div>
+      ${yoy!==null?`<div><span class="delta-label">YoY</span>${deltaHTML(yoy, '%', invert)}</div>`:''}
+    </div>
+  </div>`;
+}
+function sectionHeader(num, title, sub) {
+  return `<div class="section-header"><div class="section-header-row"><div class="section-num">${num}</div><h2 class="section-title">${title}</h2></div>${sub?`<div class="section-sub">${sub}</div>`:''}</div>`;
+}
+function wswBlock(what, soWhat, whatNext) {
+  return `<div class="wsw"><div class="wsw-grid">
+    <div><div class="wsw-label">WHAT</div><div class="wsw-text">${what}</div></div>
+    <div><div class="wsw-label">SO WHAT</div><div class="wsw-text">${soWhat}</div></div>
+    <div><div class="wsw-label">WHAT'S NEXT</div><div class="wsw-text">${whatNext}</div></div>
+  </div></div>`;
+}
+
+Chart.defaults.font.family = "'Barlow', sans-serif";
+Chart.defaults.color = '#a1a1aa';
+Chart.defaults.borderColor = BORDER;
+Chart.defaults.plugins.legend.labels.font = {family: "'Barlow', sans-serif", size: 12};
+Chart.defaults.plugins.tooltip.backgroundColor = '#000';
+Chart.defaults.plugins.tooltip.borderColor = YELLOW;
+Chart.defaults.plugins.tooltip.borderWidth = 1;
+Chart.defaults.plugins.tooltip.padding = 10;
+Chart.defaults.plugins.tooltip.titleFont = {family: "'Barlow Condensed', sans-serif", size: 13, weight: 700};
+Chart.defaults.plugins.tooltip.bodyFont = {family: "'Barlow', sans-serif", size: 12};
+Chart.defaults.plugins.tooltip.titleColor = YELLOW;
+Chart.defaults.plugins.tooltip.bodyColor = '#e4e4e7';
+
+const gridConfig = { color: BORDER, borderDash: [2, 4] };
+const tickConfig = { color: '#71717a', font: {size: 11} };
+
+function buildOverview() {
+  const {LW, PW, LW_PY, YTD, YTD_PY} = DATA;
+  let html = '';
+  html += sectionHeader('01', 'Headline KPIs — Last Week', 'May 3 – May 9, 2026 (Sun–Sat). Sales shown as Net Sales. AOV = Shopify reported field (orders-weighted).');
+  html += `<div class="kpi-grid">
+    ${kpiCard('Net Sales', LW.net_sales, LW.net_sales, PW.net_sales, LW_PY?.net_sales ?? null, {prefix:'$'})}
+    ${kpiCard('Orders', LW.orders, LW.orders, PW.orders, LW_PY?.orders ?? null)}
+    ${kpiCard('Sessions', LW.sessions, LW.sessions, PW.sessions, LW_PY?.sessions ?? null)}
+    ${kpiCard('AOV (Shopify)', LW.aov, LW.aov, PW.aov, LW_PY?.aov ?? null, {prefix:'$', dp:2})}
+    ${kpiCard('Conversion Rate', LW.cvr, LW.cvr, PW.cvr, LW_PY?.cvr ?? null, {suffix:'%', dp:2})}
+    ${kpiCard('Add to Cart Rate', LW.atc_rate, LW.atc_rate, PW.atc_rate, LW_PY?.atc_rate ?? null, {suffix:'%', dp:2})}
+    ${kpiCard('New Customers', LW.new_c, LW.new_c, PW.new_c, LW_PY?.new_c ?? null)}
+    ${kpiCard('NCA Share', LW.nca_share, LW.nca_share, PW.nca_share, LW_PY?.nca_share ?? null, {suffix:'%', dp:1})}
+  </div>`;
+
+  html += sectionHeader('02', 'YTD Performance', 'Jan 1 – Apr 25, 2026 vs prior year');
+  html += `<div class="kpi-grid">
+    ${kpiCard('YTD Net Sales', YTD.net_sales, YTD.net_sales, YTD_PY?.net_sales ?? null, null, {prefix:'$'})}
+    ${kpiCard('YTD Orders', YTD.orders, YTD.orders, YTD_PY?.orders ?? null, null)}
+    ${kpiCard('YTD Sessions', YTD.sessions, YTD.sessions, YTD_PY?.sessions ?? null, null)}
+    ${kpiCard('YTD AOV (Shopify)', YTD.aov, YTD.aov, YTD_PY?.aov ?? null, null, {prefix:'$', dp:2})}
+    ${kpiCard('YTD CVR', YTD.cvr, YTD.cvr, YTD_PY?.cvr ?? null, null, {suffix:'%', dp:2})}
+    ${kpiCard('YTD New Customers', YTD.new_c, YTD.new_c, YTD_PY?.new_c ?? null, null)}
+  </div><div class="note">Note: YTD card "WoW" shows YoY delta vs PY.</div>`;
+
+  html += sectionHeader('03', 'Weekly Trend — YTD', 'Net Sales vs PY · Orders vs PY');
+  html += `<div class="stack">
+    <div class="panel"><div class="panel-title">Net Sales — Current Year vs Prior Year (Weekly)</div>
+      <div class="chart-wrap h-320"><canvas id="chartSales"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Orders — Current Year vs Prior Year (Weekly)</div>
+      <div class="chart-wrap h-280"><canvas id="chartOrders"></canvas></div></div>
+  </div>`;
+
+  html += sectionHeader('04', 'Last Week vs Prior Week — Daily', 'Day-by-day comparison');
+  html += `<div class="grid-2">
+    <div class="panel"><div class="panel-title">Daily Net Sales (LW vs PW)</div><div class="chart-wrap h-260"><canvas id="chartDailySales"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Daily Orders (LW vs PW)</div><div class="chart-wrap h-260"><canvas id="chartDailyOrders"></canvas></div></div>
+  </div>`;
+
+  html += wswBlock(
+    'Net Sales $1.12M, -7.5% WoW but +21.8% YoY. Sessions 544k -1.7% WoW, +20.5% YoY (paid pull has tapered significantly from W17 +55% YoY). Orders 5,511 -4.1% WoW, -11.7% YoY. AOV $148.70 +0.6% WoW, +0.4% YoY (essentially flat). CVR 1.68% -2.2% WoW, +1.6% YoY. NCA share rebounded to 54.9% (+2.0 pts WoW, -0.3 pts YoY) — W17 dip to 52.9% did not sustain. JESTA Net Sales $1.40M, -4.9% under budget — second consecutive sub-budget week.',
+    'Two encouraging shifts vs last week. (1) The traffic-vs-conversion divergence has narrowed: Sessions YoY +21% (down from +55% W17), Orders YoY still -12% — paid pacing appears to have eased, traffic is healthier mix. Organic +86% YoY this week is doing more of the work, Paid only +6.5% YoY. (2) NCA share rebounded to 54.9% (+2 pts WoW) — the W17 dip looks like a single-week blip, not a trend reversal. On margin and price discipline the news is genuinely good: Margin 39.1% (+0.8 pts WoW, +2.3 pts since W11), Full Price share finally at 48% — matches the 48.4% target. Discount Usage rate 13.6%, ticked down for the second consecutive week. The trade-off persists: better mix but softer top-line.',
+    '(1) The Paid-vs-Organic shift is now visible YoY (Paid +6.5%, Organic +86%) — confirm with finance/marketing whether this is intentional spend reallocation or paid spend efficiency loss. Pull paid spend YoY to test the hypothesis. (2) Three KPIs all moved the right way this week: Margin (+0.8 pts), Full Price (at target), NCA share (+2 pts back to 54.9%) — credit the trade narrative explicitly. (3) MTD is +8.6% above budget on the 4-week stack (W11-W14, $5.69M vs $5.24M) — recovered from prior reading. (4) W15 budget $1.50M (highest FY27 week) — focus area for next week; rank-weighted run rate $1.35M would put us 10% under. (5) BC is the standout regional concern (-1.7% YoY, first negative regional YoY of FY27) — investigate cause.'
+  );
+
+  return html;
+}
+
+function buildFunnel() {
+  const {LW, PW, LW_PY} = DATA;
+  let html = '';
+  html += sectionHeader('01', 'Conversion Funnel — Last Week', 'Sessions → Cart → Checkout (Shopify-aligned: completed-checkout sessions ÷ sessions)');
+  html += `<div class="kpi-grid" style="margin-bottom:24px">
+    ${kpiCard('Conversion Rate', LW.cvr, LW.cvr, PW.cvr, LW_PY.cvr, {suffix:'%', dp:2})}
+    ${kpiCard('Add to Cart Rate', LW.atc_rate, LW.atc_rate, PW.atc_rate, LW_PY.atc_rate, {suffix:'%', dp:2})}
+    ${kpiCard('Cart→Checkout Comp.', LW.co_of_atc, LW.co_of_atc, PW.co_of_atc, null, {suffix:'%', dp:2})}
+    ${kpiCard('AOV (Shopify)', LW.aov, LW.aov, PW.aov, LW_PY.aov, {prefix:'$', dp:2})}
+  </div>`;
+
+  const funnel = [
+    {stage:'Sessions', LW: LW.sessions, PW: PW.sessions},
+    {stage:'Add to Cart', LW: LW.cart_adds, PW: PW.cart_adds},
+    {stage:'Completed Checkout', LW: LW.completed, PW: PW.completed},
+    {stage:'Orders', LW: LW.orders, PW: PW.orders},
+  ];
+  let funnelHTML = '<div class="panel"><div class="panel-title">Funnel Volume — Last Week vs Prior Week</div><div class="funnel-row">';
+  funnel.forEach((s, i) => {
+    const wow = pctDelta(s.LW, s.PW);
+    const dropLW = i===0 ? 0 : (1 - s.LW / funnel[i-1].LW) * 100;
+    const dropPW = i===0 ? 0 : (1 - s.PW / funnel[i-1].PW) * 100;
+    funnelHTML += `<div class="funnel-card">
+      <div class="funnel-card-label">${s.stage}</div>
+      <div class="funnel-card-val">${fmtNum(s.LW)}</div>
+      <div class="funnel-card-sub">PW: ${fmtNum(s.PW)} · ${deltaHTML(wow)}</div>
+      ${i>0?`<div class="dropoff">
+        <div class="dropoff-label">DROP-OFF FROM PREV STAGE</div>
+        <div class="dropoff-val">${dropLW.toFixed(1)}%</div>
+        <div class="dropoff-sub">PW: ${dropPW.toFixed(1)}% ${deltaPtsHTML(dropLW - dropPW, true)}</div>
+      </div>`:''}
+    </div>`;
+  });
+  funnelHTML += '</div></div>';
+  html += `<div class="stack">${funnelHTML}
+    <div class="panel"><div class="panel-title">Conversion Funnel Rates — YTD Weekly Trend</div><div class="chart-wrap h-300"><canvas id="chartFunnelRates"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Daily CVR — Last Week vs Prior Week</div><div class="chart-wrap h-240"><canvas id="chartDailyCVR"></canvas></div></div>
+  </div>`;
+
+  html += wswBlock(
+    'CVR 1.68% (-2.2% WoW from 1.72%, +1.6% YoY from 1.65% PY). ATC rate held in the 8.3-8.5% range. Cart→Checkout completion 19.5% (slightly softer WoW). AOV $148.70 (+0.6% WoW, +0.4% YoY — flat to slightly up vs PY).',
+    'The W18 funnel picture is cleaner than W17. Sessions YoY has dropped from +55% to +20% (paid pacing eased), and CVR YoY +1.6% means per-session conversion is essentially flat YoY. AOV YoY is flat too. So the +21.8% Net Sales YoY this week is mostly traffic volume but at a much healthier ratio than last week. The Landing Pages PDP-blended CVR held at 1.40% (vs 1.37% PY). Funnel is stable, just at a lower volume than W17.',
+    'WoW funnel softness now in its third consecutive week — small in each week but cumulative. Continue daily watch. Refresh the zombie-PDP check (NB 204L, Saucony Grid Jazz 9) against W18 data to confirm they are still pulling traffic with sub-0.3% CVR. The mid-funnel (ATC → completed checkout) is stable, so the leakage is at the entry — landing-page-to-ATC step. Worth a CRO check on the highest-traffic PDPs.'
+  );
+  return html;
+}
+
+function buildChannels() {
+  const {channels_lw_pw, channels_ytd, mediums, traffic_types, weekly_channels, weekly_channels_x, emerging, top8_channels} = DATA;
+  let html = '';
+
+  // ===== Section 01 — Topline Traffic Type Split =====
+  html += sectionHeader('01', 'Marketing Channels — W18 (May 3 – May 9)', 'Last-click attribution. Sales = Total sales (LC). Engagement = bounce rate, session duration, pages per session.');
+
+  // Traffic Type cards (Paid / Organic / Unknown)
+  html += `<div class="kpi-grid" style="margin-bottom:24px">`;
+  traffic_types.forEach(t => {
+    if (t.sales < 1000) return; // skip de-minimis
+    html += `<div class="kpi-card"><div class="kpi-label">${t.traffic_type.toUpperCase()} TRAFFIC</div>
+      <div class="kpi-value">${fmtUSDk(t.sales)}</div>
+      <div class="kpi-deltas">
+        <div><span class="delta-label">WoW</span>${deltaHTML(t.sales_wow)}</div>
+        <div><span class="delta-label">YoY</span>${deltaHTML(t.sales_yoy)}</div>
+      </div>
+      <div class="kpi-target">${t.share.toFixed(1)}% share · CVR ${t.cvr.toFixed(2)}%</div>
+    </div>`;
+  });
+  html += '</div>';
+
+  // ===== Section 02 — Medium Breakdown =====
+  html += sectionHeader('02', 'Performance by Medium', 'Search · Email · SMS · Social · Affiliate');
+  let medTbl = '<div class="panel"><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Medium</th><th class="r">Sales LW</th><th class="r">WoW</th><th class="r">YoY</th><th class="r">Sessions</th><th class="r">Sess WoW</th><th class="r">CVR</th><th class="r">AOV</th></tr></thead><tbody>';
+  mediums.forEach(m => {
+    medTbl += `<tr>
+      <td class="strong" style="text-transform:capitalize">${m.medium}</td>
+      <td class="r strong">${fmtUSD(m.sales)}</td>
+      <td class="r">${deltaHTML(m.sales_wow)}</td>
+      <td class="r">${deltaHTML(m.sales_yoy)}</td>
+      <td class="r muted">${fmtNum(m.sessions)}</td>
+      <td class="r">${deltaHTML(m.sessions_wow)}</td>
+      <td class="r">${m.cvr.toFixed(2)}%</td>
+      <td class="r muted">${m.aov ? fmtUSD(m.aov,2) : '—'}</td>
+    </tr>`;
+  });
+  medTbl += '</tbody></table></div></div>';
+  html += medTbl;
+
+  // ===== Section 03 — Channel Detail =====
+  html += sectionHeader('03', 'Channel Detail — W18 vs W17 vs PY', 'Sorted by W18 sales. Engagement metrics: bounce, avg session duration, pages per session.');
+
+  html += `<div class="grid-1-5-1" style="margin-bottom:16px">
+    <div class="panel"><div class="panel-title">Sales by Channel — W17 vs W16 (Top 12)</div><div class="chart-wrap h-380"><canvas id="chartChLWPW"></canvas></div></div>
+    <div class="panel"><div class="panel-title">YTD Channel Mix (Last-Click)</div><div class="chart-wrap h-380"><canvas id="chartChYTD"></canvas></div></div>
+  </div>`;
+
+  // Channel detail table with engagement
+  let tbl = `<div class="panel"><div class="panel-title">Channel Detail with Engagement Metrics + YoY</div><div style="overflow-x:auto">
+    <table class="tbl"><thead><tr>
+      <th>Channel</th><th class="r">Sales LW</th><th class="r">Share</th><th class="r">WoW</th><th class="r">YoY</th>
+      <th class="r">Sessions</th><th class="r">Sess YoY</th><th class="r">CVR</th><th class="r">AOV</th>
+      <th class="r">FC vs LC</th><th class="r">Bounce</th><th class="r">Dur (s)</th>
+    </tr></thead><tbody>`;
+  channels_lw_pw.forEach(c => {
+    if (c.sessions_lw < 50 && c.sales_lw < 100) return; // skip de-minimis
+    tbl += `<tr>
+      <td class="strong">${c.channel}</td>
+      <td class="r">${fmtUSD(c.sales_lw)}</td>
+      <td class="r muted">${c.share_lw.toFixed(1)}%</td>
+      <td class="r">${deltaHTML(c.sales_wow)}</td>
+      <td class="r">${deltaHTML(c.sales_yoy)}</td>
+      <td class="r muted">${fmtNum(c.sessions_lw)}</td>
+      <td class="r">${deltaHTML(c.sessions_yoy)}</td>
+      <td class="r muted">${c.cvr_lw.toFixed(2)}%</td>
+      <td class="r muted">${c.aov_lw ? fmtUSD(c.aov_lw,2) : '—'}</td>
+      <td class="r">${deltaHTML(c.fc_vs_lc)}</td>
+      <td class="r muted">${c.bounce !== null ? c.bounce.toFixed(1)+'%' : '—'}</td>
+      <td class="r muted">${c.duration !== null ? Math.round(c.duration) : '—'}</td>
+    </tr>`;
+  });
+  tbl += '</tbody></table></div></div>';
+  html += tbl;
+
+  // ===== Section 04 — Weekly Trend =====
+  html += sectionHeader('04', 'Weekly Sales Trend by Top Channel', 'Stacked area chart of FY27 to date — paid pull / organic / email & SMS');
+  html += `<div class="stack">
+    <div class="panel"><div class="panel-title">Weekly Sales by Top 8 Channels (Stacked)</div><div class="chart-wrap h-380"><canvas id="chartChWeekly"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Weekly Sessions vs CVR — Google Paid &amp; Meta Paid</div><div class="chart-wrap h-300"><canvas id="chartPaidEff"></canvas></div></div>
+  </div>`;
+
+  // ===== Section 05 — Emerging / Test Channels =====
+  html += sectionHeader('05', 'Emerging &amp; Test Channels', 'Pinterest · Reddit · TikTok · AI Search — sessions and conversions');
+  html += `<div class="grid-2">
+    <div class="panel"><div class="panel-title">Pinterest, Reddit, TikTok — Weekly Sessions</div><div class="chart-wrap h-280"><canvas id="chartEmerging"></canvas></div></div>
+    <div class="panel"><div class="panel-title">AI Search — Weekly Sessions &amp; Sales</div><div class="chart-wrap h-280"><canvas id="chartAI"></canvas></div></div>
+  </div>`;
+
+  // ===== Section 06 — Engagement Quality =====
+  html += sectionHeader('06', 'Engagement Quality — W17', 'Bounce rate vs Conversion rate by channel — efficiency map');
+  html += `<div class="panel"><div class="panel-title">Bounce Rate vs CVR (bubble = sessions)</div><div class="chart-wrap h-380"><canvas id="chartEngagementMap"></canvas></div></div>`;
+
+  // ===== WSW =====
+  html += wswBlock(
+    `Paid traffic $556k (68.4% of LC sales) at 1.46% CVR; organic $202k (24.9%) at 2.35% CVR. YoY: Paid only +6.5%, Organic +86.4% — major shift toward organic. By channel W18: Google Paid -6.7% WoW ($478k still 59% of channel sales). Meta Paid +0.9% WoW ($24k) — bounce remains poor at 65-70%. SMS Attentive +5.3% WoW (recovery from W17 drop). BNPL Apps +5.7% WoW. Shop App / Shopify -36% WoW (W17's +110% spike not sustained). Affiliate/Coupon -22% WoW. Pinterest Paid: still 0 sales on continued sessions — same pattern as W17. Reddit: now reporting some sales activity, watch closely. First-click vs Last-click: Meta FC is materially higher than LC, supporting the assist-not-finisher hypothesis.`,
+    `The big story this week is the YoY shift between Paid and Organic. Paid sales are essentially flat YoY (+6.5%) while Organic is +86% YoY — meaning the FY27 growth has been organic-led at the year level, even though Paid still dominates weekly volume (68% of sales). This is healthier for unit economics. Inside Paid, Meta is no longer bleeding sessions WoW (sessions flat) but engagement metrics remain poor; the question is whether spend has paced down or efficiency has improved. SMS Attentive recovered from last week's drop — the W17 session collapse looks like cadence noise, not a structural break. Pinterest Paid continues to produce sessions without sales — this is now a 3-week pattern.`,
+    `(1) The Paid-Organic YoY divergence is a strategic finding — bring Paid spend YoY data to the trade meeting to test whether spend has shrunk or efficiency has improved. (2) Pinterest Paid spend pause is overdue — three weeks of session inflation with no conversion data. Verify pixel firing or pause spend. (3) Meta Paid trajectory has stabilised WoW but engagement remains poor — continue creative refresh thinking but the urgency has reduced. (4) BC regional drop (-1.7% YoY) needs an attribution-level check — is paid spend in BC underperforming or being deprioritised? (5) First-click vs Last-click attribution analysis: Meta's FC sales materially higher than LC suggests Meta is doing brand work the LC view under-attributes; worth surfacing this in any Meta efficiency conversations to avoid over-cutting.`
+  );
+
+  return html;
+}
+function buildDiscounts() {
+  const {discounts} = DATA;
+  let html = '';
+  const lastWeek = discounts[discounts.length - 1];
+  const prevWeek = discounts[discounts.length - 2];
+  const pre = discounts.slice(0, 10);
+  const post = discounts.slice(10);
+  const preAvg = pre.reduce((s,d) => s + d.disc_order_rate, 0) / pre.length;
+  const postAvg = post.reduce((s,d) => s + d.disc_order_rate, 0) / post.length;
+
+  html += sectionHeader('01', 'Discount Performance — W17 (Apr 26 – May 2)', 'Note: Discount file orders ≠ Shopify eCom orders (different scope/aggregation). Use rates directionally.');
+  html += `<div class="kpi-grid" style="margin-bottom:24px">
+    ${kpiCard('Discounted Order Rate', lastWeek.disc_order_rate, lastWeek.disc_order_rate, prevWeek.disc_order_rate, null, {suffix:'%', dp:2, invert:true})}
+    ${kpiCard('Discount $ Rate (vs Gross)', lastWeek.disc_dollar_rate, lastWeek.disc_dollar_rate, prevWeek.disc_dollar_rate, null, {suffix:'%', dp:2, invert:true})}
+    ${kpiCard('Total Discounts Applied', lastWeek.applied_disc, lastWeek.applied_disc, prevWeek.applied_disc, null, {prefix:'$', invert:true})}
+    ${kpiCard('Discounted Orders', lastWeek.disc_orders, lastWeek.disc_orders, prevWeek.disc_orders, null, {invert:true})}
+  </div>`;
+
+  html += `<div class="stack">
+    <div class="panel"><div class="panel-title">Discounted Order Rate — YTD Weekly Trend (March 13 restriction visible)</div><div class="chart-wrap h-300"><canvas id="chartDiscRate"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Pre vs Post March 13 Restriction — Discount Order Rate</div>
+      <div class="grid-3">
+        <div class="compare-box pre"><div class="compare-label">Pre-Restriction Avg<br>(Jan 4 – Mar 8)</div><div class="compare-value">${preAvg.toFixed(1)}%</div><div class="compare-sub">10-week mean</div></div>
+        <div class="compare-box post"><div class="compare-label">Post-Restriction Avg<br>(Mar 15 – Apr 19)</div><div class="compare-value">${postAvg.toFixed(1)}%</div><div class="compare-sub">6-week mean</div></div>
+        <div class="compare-box now"><div class="compare-label">Last Week</div><div class="compare-value yellow">${lastWeek.disc_order_rate.toFixed(1)}%</div><div class="compare-sub">↑ ${(lastWeek.disc_order_rate - postAvg).toFixed(1)} pts vs post-avg</div></div>
+      </div>
+    </div>
+  </div>`;
+
+  html += wswBlock(
+    `Discount activity ticked up last week — discounted-order rate rose from 11.8% to 14.1% (+2.2 pts WoW), and discount $ as % of gross sales from 1.29% to 1.63%. This is the third consecutive week of rising discount intensity from the Apr 5 floor (9.6%). Pre/post-restriction context: pre-March 13 avg was ${preAvg.toFixed(1)}% discounted-order rate; post-restriction average has held at ${postAvg.toFixed(1)}% — last week\'s 14.1% is the highest reading since the restriction.`,
+    'Two readings on this. (1) The trend is small in absolute terms — at 1.63% of gross sales, we are still operating at less than half the pre-restriction rate (avg ~2.4%) and well below the Jan promo peak. The post-restriction discount discipline is largely intact. (2) The directional drift is worth watching: three consecutive weeks of rising rate means either approved promotional activity is creeping back, or specific high-discount SKUs/codes are being over-leveraged.',
+    'Pull the discount code-level breakdown for the past 3 weeks to identify which codes account for the rising rate (employee/staff codes vs broader promo codes vs returning customer codes). If concentration is in 1-2 codes, that\'s an isolated pattern. If it\'s broad-based, schedule a check-in on whether merchandising is requesting more permissions. Continue tracking the 14% threshold weekly — if discount-order rate breaks through 16% for two consecutive weeks, escalate as it begins to erode the post-restriction margin gain.'
+  );
+  return html;
+}
+
+function buildProducts() {
+  const {brands, top_products_lw, gainers, decliners, ytd_top} = DATA;
+  let html = '';
+  html += sectionHeader('01', 'Brand Performance — W17 (Apr 26 – May 2)', 'Last Week vs Prior Week, all brands. Net Sales basis.');
+  html += `<div class="grid-1-3-1" style="margin-bottom:16px">
+    <div class="panel"><div class="panel-title">Net Sales by Brand — LW vs PW</div><div class="chart-wrap h-420"><canvas id="chartBrandSales"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Brand WoW % Change</div><div class="chart-wrap h-420"><canvas id="chartBrandWoW"></canvas></div></div>
+  </div>`;
+
+  html += sectionHeader('02', 'Product Movers — W17 (Apr 26 – May 2)', 'Largest $ swings (where LW or PW > $1k, Net Sales basis)');
+
+  let gainersTbl = '<div class="panel"><div class="panel-title">Top 10 Gainers ($ delta vs PW)</div><table class="tbl"><thead><tr><th>Product</th><th class="r">LW</th><th class="r">Δ$</th></tr></thead><tbody>';
+  gainers.forEach(p => {
+    gainersTbl += `<tr><td>${p.title}</td><td class="r strong">${fmtUSD(p.lw)}</td><td class="r gain">+${fmtUSD(p.delta)}</td></tr>`;
+  });
+  gainersTbl += '</tbody></table></div>';
+
+  let decliTbl = '<div class="panel"><div class="panel-title">Top 10 Decliners ($ delta vs PW)</div><table class="tbl"><thead><tr><th>Product</th><th class="r">LW</th><th class="r">Δ$</th></tr></thead><tbody>';
+  decliners.forEach(p => {
+    decliTbl += `<tr><td>${p.title}</td><td class="r strong">${fmtUSD(p.lw)}</td><td class="r loss">${fmtUSD(p.delta)}</td></tr>`;
+  });
+  decliTbl += '</tbody></table></div>';
+
+  html += `<div class="grid-2">${gainersTbl}${decliTbl}</div>`;
+
+  html += sectionHeader('03', 'Top Products — W17 (Apr 26 – May 2)', 'By net sales');
+  let topTbl = '<div class="panel"><table class="tbl"><thead><tr><th style="width:30px">#</th><th>Product</th><th class="r">Net Sales</th><th class="r">Units</th><th class="r">Orders</th></tr></thead><tbody>';
+  top_products_lw.forEach((p, i) => {
+    topTbl += `<tr><td class="rank">${i+1}</td><td>${p.title}</td><td class="r strong">${fmtUSD(p.sales)}</td><td class="r muted">${fmtNum(p.units)}</td><td class="r muted">${fmtNum(p.orders)}</td></tr>`;
+  });
+  topTbl += '</tbody></table></div>';
+  html += topTbl;
+
+  html += sectionHeader('04', 'YTD Top 10 Products', 'By net sales');
+  let ytdTbl = '<div class="panel"><table class="tbl"><thead><tr><th style="width:30px">#</th><th>Product</th><th class="r">YTD Net Sales</th><th class="r">Units</th><th class="r">Orders</th></tr></thead><tbody>';
+  ytd_top.forEach((p, i) => {
+    ytdTbl += `<tr><td class="rank">${i+1}</td><td>${p.title}</td><td class="r strong">${fmtUSD(p.sales)}</td><td class="r muted">${fmtNum(p.units)}</td><td class="r muted">${fmtNum(p.orders)}</td></tr>`;
+  });
+  ytdTbl += '</tbody></table></div>';
+  html += ytdTbl;
+
+  html += wswBlock(
+    'Jordan led the brand growth +25.3% WoW, fuelled by two new fresh launches landing in the top of LW (Jordan 5 Retro OG Metallic Silver, Women\'s 4 Retro Pearl Pink). Nike +4.3%, Adidas +6.3%, On +36.0%, Salomon +33.0%, Converse +44.0%, UGG +70.3%. Hoka -48.2% on launch fade (Bondi SR, Clifton 10 both top decliners with returns offsetting LW sales). Top YTD product is the Air Max 95 OG Black/Neon Yellow — a 3x runner over the next product. Top 100 SKUs ≈ 26% of YTD sales (long tail still meaningful).',
+    'Jordan launches are doing exactly what launches should — punching above their weight in week 1 with no PW comp. The breadth of the WoW gain across mid-tier brands (On, Salomon, Asics, Vans, Converse) is healthy concentration risk reduction — this isn\'t a one-product week. Hoka\'s fall is launch-fade, not a structural issue, but it signals the previous week\'s Hoka pop didn\'t have legs. Concentration check: top 20 SKUs ≈ 11% of YTD revenue — the assortment is performing as a portfolio, which is the right outcome for the long-term margin and merch decision-making.',
+    'Profile the two Jordan launches into the LTV cohort model when February actuals are advanced — Jordan launch buyers historically over-index on repeat. For Hoka, check whether the launch was over-indexed in paid spend WoW (running Hoka launch ads when launch demand is fading is wasted spend). Lock in the Jordan 5 OG and Women\'s 4 Pearl Pink for replenishment urgency check with merch — if these are going to repeat next week, units need to be in. The mid-tier breadth becomes a candidate for the May Meta creative testing slate — diversifying beyond Nike/Jordan in paid social.'
+  );
+
+  html += `<div class="method">
+    <div class="method-title">Methodology Notes</div>
+    <ul>
+      <li><strong>Sales</strong> = Net Sales (Shopify field), used for headline and all comparisons throughout.</li>
+      <li><strong>AOV</strong> = Shopify reported "Average order value" field, orders-weighted across the period (online-store basis). LW $149.75, +4.0% YoY, +0.8% WoW.</li>
+      <li><strong>Conversion rate</strong> = sessions that completed checkout ÷ sessions (Shopify-standard methodology). LW CVR 1.76%, +18.4% YoY, -2.9% WoW.</li>
+      <li><strong>Net Sales scope note:</strong> Net Sales YoY (+43.8%) is materially larger than AOV × Orders YoY (+6%) implies. The reporting view appears to include broader revenue sources (POS / wholesale) in CY that weren\'t in PY — confirmed as expected. Like-for-like online-store revenue YoY is closer to +6%; the headline +43.8% is correct as reported but should be framed as inclusive of expanded scope when speaking to senior management.</li>
+      <li>Channel attribution: last-click. Known ~10% misattribution from payment gateways and Meta under-credit on last-click vs first-click.</li>
+      <li>Discount file totals (orders) differ from eCom KPI orders due to scope/aggregation differences; rates used directionally only.</li>
+      <li>Brand classification by product title keyword match — "Other" includes apparel and unbranded/multi-branded products.</li>
+      <li>Bot activity targeting Jordan GS sizing remains an active background factor in checkout abandonment metrics.</li>
+    </ul>
+  </div>`;
+
+  return html;
+}
+
+let chartInstances = {};
+function destroyCharts() { Object.values(chartInstances).forEach(c => c && c.destroy()); chartInstances = {}; }
+
+function renderOverviewCharts() {
+  const {weekly, daily_lw, daily_pw} = DATA;
+  const salesEl = document.getElementById('chartSales');
+  if (salesEl) {
+    chartInstances.sales = new Chart(salesEl, {
+      type: 'bar',
+      data: {
+        labels: weekly.map(w=>w.week),
+        datasets: [
+          {label:'Net Sales PY', data:weekly.map(w=>w.net_sales_py), backgroundColor:'#3f3f46', borderRadius:2, order:2},
+          {label:'Net Sales CY', data:weekly.map(w=>w.net_sales), backgroundColor:YELLOW, borderRadius:2, order:1},
+          {label:'YoY %', data:weekly.map(w=>w.net_sales_yoy), type:'line', yAxisID:'y2', borderColor:GREEN, backgroundColor:GREEN, tension:0.2, pointRadius:3, order:0},
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        scales:{
+          x:{grid:gridConfig, ticks:tickConfig},
+          y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}},
+          y2:{position:'right', grid:{display:false}, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}}
+        },
+        plugins:{
+          tooltip:{callbacks:{label:ctx=>{const v=ctx.raw; if(ctx.dataset.label==='YoY %') return ctx.dataset.label+': '+v.toFixed(1)+'%'; return ctx.dataset.label+': '+fmtUSDk(v)}}}
+        }
+      }
+    });
+  }
+  const ordersEl = document.getElementById('chartOrders');
+  if (ordersEl) {
+    chartInstances.orders = new Chart(ordersEl, {
+      type:'bar',
+      data:{
+        labels: weekly.map(w=>w.week),
+        datasets:[
+          {label:'Orders PY', data:weekly.map(w=>w.orders_py), backgroundColor:'#3f3f46', borderRadius:2, order:2},
+          {label:'Orders CY', data:weekly.map(w=>w.orders), backgroundColor:YELLOW, borderRadius:2, order:1},
+          {label:'YoY %', data:weekly.map(w=>w.orders_yoy), type:'line', yAxisID:'y2', borderColor:GREEN, backgroundColor:GREEN, tension:0.2, pointRadius:3, order:0},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{
+          x:{grid:gridConfig, ticks:tickConfig},
+          y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>fmtNum(v)}},
+          y2:{position:'right', grid:{display:false}, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}}
+        },
+        plugins:{
+          tooltip:{callbacks:{label:ctx=>{const v=ctx.raw; if(ctx.dataset.label==='YoY %') return ctx.dataset.label+': '+v.toFixed(1)+'%'; return ctx.dataset.label+': '+fmtNum(v)}}}
+        }
+      }
+    });
+  }
+  const dlsEl = document.getElementById('chartDailySales');
+  if (dlsEl) {
+    chartInstances.dailySales = new Chart(dlsEl, {
+      type:'bar',
+      data:{
+        labels: daily_lw.map(d=>d.day.split(' ')[0]),
+        datasets:[
+          {label:'Prev Week', data:daily_pw.map(d=>d.net_sales), backgroundColor:'#52525b', borderRadius:2},
+          {label:'Last Week', data:daily_lw.map(d=>d.net_sales), backgroundColor:YELLOW, borderRadius:2},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtUSDk(ctx.raw)}}}
+      }
+    });
+  }
+  const dloEl = document.getElementById('chartDailyOrders');
+  if (dloEl) {
+    chartInstances.dailyOrders = new Chart(dloEl, {
+      type:'bar',
+      data:{
+        labels: daily_lw.map(d=>d.day.split(' ')[0]),
+        datasets:[
+          {label:'Prev Week', data:daily_pw.map(d=>d.orders), backgroundColor:'#52525b', borderRadius:2},
+          {label:'Last Week', data:daily_lw.map(d=>d.orders), backgroundColor:YELLOW, borderRadius:2},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:tickConfig}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtNum(ctx.raw)}}}
+      }
+    });
+  }
+}
+
+function renderFunnelCharts() {
+  const {weekly, daily_lw, daily_pw} = DATA;
+  const fr = document.getElementById('chartFunnelRates');
+  if (fr) {
+    chartInstances.funnelRates = new Chart(fr, {
+      type:'line',
+      data:{
+        labels: weekly.map(w=>w.week),
+        datasets:[
+          {label:'Add to Cart Rate', data:weekly.map(w=>w.atcr), borderColor:YELLOW, backgroundColor:YELLOW, tension:0.2, pointRadius:3},
+          {label:'Comp. Checkout (of ATC)', data:weekly.map(w=>w.comp_co_of_atc), borderColor:BLUE, backgroundColor:BLUE, tension:0.2, pointRadius:3},
+          {label:'Conversion Rate', data:weekly.map(w=>w.cvr), borderColor:PINK, backgroundColor:PINK, tension:0.2, pointRadius:3},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(1)+'%'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.raw.toFixed(2)+'%'}}}
+      }
+    });
+  }
+  const dc = document.getElementById('chartDailyCVR');
+  if (dc) {
+    chartInstances.dailyCVR = new Chart(dc, {
+      type:'line',
+      data:{
+        labels: daily_lw.map(d=>d.day.split(' ')[0]),
+        datasets:[
+          {label:'Prev Week', data:daily_pw.map(d=>d.cvr), borderColor:'#52525b', backgroundColor:'#52525b', tension:0.2, pointRadius:3},
+          {label:'Last Week', data:daily_lw.map(d=>d.cvr), borderColor:YELLOW, backgroundColor:YELLOW, tension:0.2, pointRadius:3},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(1)+'%'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.raw.toFixed(2)+'%'}}}
+      }
+    });
+  }
+}
+
+function renderChannelCharts() {
+  const {channels_lw_pw, channels_ytd, weekly_channels, weekly_channels_x, emerging, top8_channels} = DATA;
+
+  // Top 12 channels with sales
+  const top12 = channels_lw_pw.filter(c => c.sales_lw > 100 || c.sales_pw > 100).slice(0, 12);
+  const ytdShare = channels_ytd.filter(c => c.share >= 0.3);
+
+  // Channel LW vs PW
+  const c1 = document.getElementById('chartChLWPW');
+  if (c1) {
+    chartInstances.chLWPW = new Chart(c1, {
+      type:'bar',
+      data:{
+        labels: top12.map(c=>c.channel),
+        datasets:[
+          {label:'Prev Week', data:top12.map(c=>c.sales_pw), backgroundColor:'#52525b', borderRadius:2},
+          {label:'Last Week', data:top12.map(c=>c.sales_lw), backgroundColor:YELLOW, borderRadius:2},
+        ]
+      },
+      options:{
+        indexAxis:'y', responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}}, y:{grid:gridConfig, ticks:{...tickConfig, color:'#e4e4e7'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtUSDk(ctx.raw)}}}
+      }
+    });
+  }
+
+  // YTD share
+  const c2 = document.getElementById('chartChYTD');
+  if (c2) {
+    chartInstances.chYTD = new Chart(c2, {
+      type:'bar',
+      data:{
+        labels: ytdShare.map(c=>c.channel),
+        datasets:[{label:'YTD Share', data: ytdShare.map(c=>c.share), backgroundColor: ytdShare.map((c,i)=>i===0?YELLOW:i<4?'#fbbf24':'#71717a'), borderRadius:2}]
+      },
+      options:{
+        indexAxis:'y', responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}}, y:{grid:gridConfig, ticks:{...tickConfig, color:'#e4e4e7'}}},
+        plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>ctx.raw.toFixed(1)+'%'}}}
+      }
+    });
+  }
+
+  // Weekly stacked
+  const cw = document.getElementById('chartChWeekly');
+  if (cw) {
+    const colors = [YELLOW, '#fbbf24', '#a16207', BLUE, '#a855f7', GREEN, RED, '#f97316'];
+    const datasets = top8_channels.map((ch, i) => {
+      const data = weekly_channels_x.map(wk => {
+        const found = (weekly_channels[ch] || []).find(w => w.week === wk);
+        return found ? found.sales : 0;
+      });
+      return {label: ch, data, backgroundColor: colors[i % colors.length], stack: 's'};
+    });
+    chartInstances.chWeekly = new Chart(cw, {
+      type:'bar',
+      data:{labels: weekly_channels_x, datasets},
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig, stacked:true}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}, stacked:true}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtUSDk(ctx.raw)}}}
+      }
+    });
+  }
+
+  // Paid efficiency — Google Paid + Meta Paid sessions vs sales
+  const cp = document.getElementById('chartPaidEff');
+  if (cp) {
+    const gp = weekly_channels['Google Paid'] || [];
+    const mp = weekly_channels['Meta Paid'] || [];
+    chartInstances.paidEff = new Chart(cp, {
+      data:{
+        labels: gp.map(w => w.week),
+        datasets: [
+          {type:'line', label:'Google Paid Sessions', data: gp.map(w => w.sessions), borderColor: YELLOW, backgroundColor: YELLOW, yAxisID: 'y', tension: 0.2, pointRadius: 3, borderWidth: 2.5},
+          {type:'line', label:'Meta Paid Sessions', data: mp.map(w => w.sessions), borderColor: RED, backgroundColor: RED, yAxisID: 'y', tension: 0.2, pointRadius: 3, borderWidth: 2.5},
+          {type:'bar', label:'Google Paid Sales', data: gp.map(w => w.sales), backgroundColor: 'rgba(255,224,0,0.3)', yAxisID: 'y2', order: 2},
+          {type:'bar', label:'Meta Paid Sales', data: mp.map(w => w.sales), backgroundColor: 'rgba(248,113,113,0.3)', yAxisID: 'y2', order: 2},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{
+          x:{grid:gridConfig, ticks:tickConfig},
+          y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>(v/1000).toFixed(0)+'k'}, position:'left'},
+          y2:{grid:{display:false}, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}, position:'right'}
+        },
+        plugins:{tooltip:{callbacks:{label:ctx=>{
+          const lbl = ctx.dataset.label;
+          if (lbl.includes('Sessions')) return lbl+': '+fmtNum(ctx.raw);
+          return lbl+': '+fmtUSDk(ctx.raw);
+        }}}}
+      }
+    });
+  }
+
+  // Emerging channels — Pinterest, Reddit, TikTok sessions
+  const ce = document.getElementById('chartEmerging');
+  if (ce) {
+    const allWeeks = (emerging['Pinterest Paid']||[]).concat(emerging['Pinterest Organic']||[]).concat(emerging['Reddit']||[]).concat(emerging['TikTok']||[]);
+    const weekSet = [...new Set(allWeeks.map(w => w.week))].sort((a,b) => new Date(a+' 2026') - new Date(b+' 2026'));
+    function dataFor(ch) {
+      const arr = emerging[ch] || [];
+      return weekSet.map(wk => {
+        const f = arr.find(w => w.week === wk);
+        return f ? f.sessions : 0;
+      });
+    }
+    chartInstances.emerging = new Chart(ce, {
+      type: 'line',
+      data: {
+        labels: weekSet,
+        datasets: [
+          {label:'Pinterest Paid', data: dataFor('Pinterest Paid'), borderColor:'#ef4444', backgroundColor:'#ef4444', tension:0.2, pointRadius:3},
+          {label:'Pinterest Organic', data: dataFor('Pinterest Organic'), borderColor:'#fca5a5', backgroundColor:'#fca5a5', tension:0.2, pointRadius:3, borderDash:[3,3]},
+          {label:'Reddit', data: dataFor('Reddit'), borderColor:'#fb923c', backgroundColor:'#fb923c', tension:0.2, pointRadius:3},
+          {label:'TikTok', data: dataFor('TikTok'), borderColor:'#a855f7', backgroundColor:'#a855f7', tension:0.2, pointRadius:3},
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>fmtNum(v)}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtNum(ctx.raw)+' sessions'}}}
+      }
+    });
+  }
+
+  // AI Search
+  const cai = document.getElementById('chartAI');
+  if (cai) {
+    const ai = emerging['AI Search'] || [];
+    chartInstances.aiSearch = new Chart(cai, {
+      data: {
+        labels: ai.map(w => w.week),
+        datasets: [
+          {type:'bar', label:'Sales', data: ai.map(w => w.sales), backgroundColor: YELLOW, yAxisID:'y2', borderRadius:2},
+          {type:'line', label:'Sessions', data: ai.map(w => w.sessions), borderColor: BLUE, backgroundColor: BLUE, yAxisID:'y', tension:0.2, pointRadius:3, borderWidth:2.5},
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        scales:{
+          x:{grid:gridConfig, ticks:tickConfig},
+          y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>fmtNum(v)}, position:'left'},
+          y2:{grid:{display:false}, ticks:{...tickConfig, callback:v=>'$'+v.toFixed(0)}, position:'right'}
+        },
+        plugins:{tooltip:{callbacks:{label:ctx=>{
+          if (ctx.dataset.label==='Sales') return 'Sales: '+fmtUSD(ctx.raw);
+          return 'Sessions: '+fmtNum(ctx.raw);
+        }}}}
+      }
+    });
+  }
+
+  // Engagement bubble chart — Bounce vs CVR sized by sessions
+  const cem = document.getElementById('chartEngagementMap');
+  if (cem) {
+    const points = channels_lw_pw.filter(c => c.bounce !== null && c.cvr_lw !== null && c.sessions_lw > 200).map(c => ({
+      x: c.bounce,
+      y: c.cvr_lw,
+      r: Math.max(5, Math.min(40, Math.sqrt(c.sessions_lw)/5)),
+      label: c.channel,
+      sales: c.sales_lw,
+    }));
+    chartInstances.engMap = new Chart(cem, {
+      type:'bubble',
+      data:{datasets:[{
+        label: 'Channels',
+        data: points,
+        backgroundColor: points.map(p => {
+          if (p.y >= 1.5 && p.x <= 50) return 'rgba(74,222,128,0.7)'; // good
+          if (p.y < 0.5 || p.x > 65) return 'rgba(248,113,113,0.7)'; // bad
+          return 'rgba(255,224,0,0.6)';
+        }),
+        borderColor: '#fff',
+        borderWidth: 1,
+      }]},
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        scales:{
+          x:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}, title:{display:true, text:'Bounce Rate (lower is better)', color:'#a1a1aa', font:{size:11, family:'Barlow Condensed', weight:600}}},
+          y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(2)+'%'}, title:{display:true, text:'Conversion Rate (higher is better)', color:'#a1a1aa', font:{size:11, family:'Barlow Condensed', weight:600}}}
+        },
+        plugins:{
+          legend:{display:false},
+          tooltip:{callbacks:{label: ctx => {
+            const p = ctx.raw;
+            return [p.label, 'Bounce: '+p.x.toFixed(1)+'%', 'CVR: '+p.y.toFixed(2)+'%', 'Sales: '+fmtUSD(p.sales)];
+          }}}
+        }
+      }
+    });
+  }
+}
+function renderDiscountCharts() {
+  const {discounts} = DATA;
+  const el = document.getElementById('chartDiscRate');
+  if (el) {
+    chartInstances.discRate = new Chart(el, {
+      data:{
+        labels: discounts.map(d=>d.week),
+        datasets:[
+          {type:'bar', label:'Discount $', data:discounts.map(d=>d.applied_disc), yAxisID:'y2', backgroundColor:'#3f3f46', borderRadius:2, order:2},
+          {type:'line', label:'% Orders Discounted', data:discounts.map(d=>d.disc_order_rate), borderColor:YELLOW, backgroundColor:YELLOW, tension:0.2, pointRadius:3, borderWidth:2.5, order:1},
+          {type:'line', label:'$ Discount Rate', data:discounts.map(d=>d.disc_dollar_rate), borderColor:BLUE, backgroundColor:BLUE, tension:0.2, pointRadius:3, order:0},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{
+          x:{grid:gridConfig, ticks:tickConfig},
+          y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}},
+          y2:{position:'right', grid:{display:false}, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}}
+        },
+        plugins:{
+          tooltip:{callbacks:{label:ctx=>{const v=ctx.raw; const lbl=ctx.dataset.label; if(lbl==='Discount $') return lbl+': '+fmtUSDk(v); return lbl+': '+v.toFixed(2)+'%'}}}
+        }
+      },
+      plugins:[{
+        id:'restrictionLine',
+        afterDraw(chart) {
+          const idx = chart.data.labels.indexOf('Mar 15');
+          if (idx<0) return;
+          const xPos = chart.scales.x.getPixelForValue(idx);
+          const ctx = chart.ctx;
+          ctx.save();
+          ctx.strokeStyle = RED;
+          ctx.lineWidth = 1.5;
+          ctx.setLineDash([4,4]);
+          ctx.beginPath();
+          ctx.moveTo(xPos, chart.chartArea.top);
+          ctx.lineTo(xPos, chart.chartArea.bottom);
+          ctx.stroke();
+          ctx.setLineDash([]);
+          ctx.fillStyle = RED;
+          ctx.font = "700 11px 'Barlow Condensed', sans-serif";
+          ctx.fillText('Mar 13 Restriction', xPos+4, chart.chartArea.top+12);
+          ctx.restore();
+        }
+      }]
+    });
+  }
+}
+
+function renderProductCharts() {
+  const {brands} = DATA;
+  const top12 = brands.slice(0,12);
+  const wow = brands.filter(b=>b.sales_lw>1000).sort((a,b)=>b.wow-a.wow);
+  const b1 = document.getElementById('chartBrandSales');
+  if (b1) {
+    chartInstances.brandSales = new Chart(b1, {
+      type:'bar',
+      data:{
+        labels: top12.map(b=>b.brand),
+        datasets:[
+          {label:'Prev Week', data:top12.map(b=>b.sales_pw), backgroundColor:'#52525b', borderRadius:2},
+          {label:'Last Week', data:top12.map(b=>b.sales_lw), backgroundColor:YELLOW, borderRadius:2},
+        ]
+      },
+      options:{
+        indexAxis:'y', responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}}, y:{grid:gridConfig, ticks:{...tickConfig, color:'#e4e4e7'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtUSDk(ctx.raw)}}}
+      }
+    });
+  }
+  const b2 = document.getElementById('chartBrandWoW');
+  if (b2) {
+    chartInstances.brandWoW = new Chart(b2, {
+      type:'bar',
+      data:{
+        labels: wow.map(b=>b.brand),
+        datasets:[{label:'WoW %', data: wow.map(b=>b.wow), backgroundColor: wow.map(b=>b.wow>=0?GREEN:RED), borderRadius:2}]
+      },
+      options:{
+        indexAxis:'y', responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}}, y:{grid:gridConfig, ticks:{...tickConfig, color:'#e4e4e7'}}},
+        plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>ctx.raw.toFixed(1)+'%'}}}
+      }
+    });
+  }
+}
+
+
+function buildTradeMeeting() {
+  const T = TRADE;
+  const w14 = T.w14_summary;
+  let html = '';
+
+  // === SECTION 1 — W12 Topline ===
+  html += sectionHeader('01', 'Trade Meeting — W14 (May 3 – May 9)', 'JESTA total · Net Sales basis · vs Budget CA, vs W13, vs Prior Year');
+
+  // Pull Shopify KPI budget data (Sessions, Conversion, AOV)
+  const sk_sessions = T.shopify_kpis.find(k => k.kpi === 'Sessions');
+  const sk_conv = T.shopify_kpis.find(k => k.kpi === 'Conversion');
+  const sk_aov = T.shopify_kpis.find(k => k.kpi === 'AOV');
+  const fpTarget = T.full_price_target; // 48.4%
+
+  html += `<div class="kpi-grid">
+    <div class="kpi-card"><div class="kpi-label">Net Sales (JESTA)</div>
+      <div class="kpi-value">${fmtUSD(w14.net_sales)}</div>
+      <div class="kpi-deltas">
+        <div><span class="delta-label">WoW</span>${deltaHTML(w14.net_sales_wow_pct)}</div>
+        <div><span class="delta-label">vs Budget</span>${deltaHTML(w14.var_pct)}</div>
+      </div>
+      <div class="kpi-target">Budget ${fmtUSDk(w14.budget)}</div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">Sessions</div>
+      <div class="kpi-value">${fmtNum(w14.sessions)}</div>
+      <div class="kpi-deltas">
+        <div><span class="delta-label">vs Budget</span>${deltaHTML(sk_sessions.var_pct)}</div>
+      </div>
+      <div class="kpi-target">Budget ${fmtNum(sk_sessions.budget)}</div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">Conversion Rate</div>
+      <div class="kpi-value">${w14.cvr.toFixed(2)}%</div>
+      <div class="kpi-deltas">
+        <div><span class="delta-label">WoW</span>${deltaHTML(w14.cvr_wow_pct)}</div>
+        <div><span class="delta-label">vs Budget</span>${deltaHTML(sk_conv.var_pct)}</div>
+      </div>
+      <div class="kpi-target">Budget ${(sk_conv.budget*100).toFixed(2)}%</div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">AOV (Shopify)</div>
+      <div class="kpi-value">$${sk_aov.last_week.toFixed(2)}</div>
+      <div class="kpi-deltas">
+        <div><span class="delta-label">vs Budget</span>${deltaHTML(sk_aov.var_pct)}</div>
+      </div>
+      <div class="kpi-target">Budget $${sk_aov.budget.toFixed(2)}</div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">Margin %</div>
+      <div class="kpi-value">${w14.margin_pct.toFixed(1)}%</div>
+      <div class="kpi-deltas">
+        <div><span class="delta-label">vs W13 (${w14.margin_w13.toFixed(1)}%)</span>${deltaPtsHTML(w14.margin_pts_wow)}</div>
+      </div>
+      <div class="kpi-target">&nbsp;</div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">Full Price Share</div>
+      <div class="kpi-value">${w14.full_price_share.toFixed(0)}%</div>
+      <div class="kpi-deltas">
+        <div><span class="delta-label">vs Target</span>${deltaPtsHTML(w14.full_price_share - fpTarget)}</div>
+      </div>
+      <div class="kpi-target">Target ${fpTarget.toFixed(1)}%</div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">Discount Usage (Orders)</div>
+      <div class="kpi-value">${w14.discount_usage_pct.toFixed(1)}%</div>
+      <div class="kpi-deltas">
+        <div><span class="delta-label">WoW</span>${deltaPtsHTML(w14.discount_usage_pct - w14.discount_usage_w13, true)}</div>
+      </div>
+      <div class="kpi-target">&nbsp;</div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">Orders</div>
+      <div class="kpi-value">${fmtNum(w14.orders)}</div>
+      <div class="kpi-deltas">
+        <div><span class="delta-label">WoW</span>${deltaHTML(pctDelta(w14.orders, w14.orders_w13))}</div>
+      </div>
+      <div class="kpi-target">&nbsp;</div>
+    </div>
+  </div>`;
+
+  // === SECTION 2 — JESTA Category breakdown vs Budget vs PY ===
+  html += sectionHeader('02', 'Category Performance — W14', 'Footwear · Apparel · Accessories · vs Budget · vs PY');
+  html += `<div class="grid-2">
+    <div class="panel"><div class="panel-title">Net Sales by Category — W12 vs Budget</div><div class="chart-wrap h-300"><canvas id="chartCatBudget"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Category YoY %</div><div class="chart-wrap h-300"><canvas id="chartCatYoY"></canvas></div></div>
+  </div>`;
+
+  let catTbl = '<div class="panel" style="margin-top:16px"><div class="panel-title">Category Detail</div><table class="tbl"><thead><tr><th>Category</th><th class="r">Net Sales</th><th class="r">Budget</th><th class="r">vs Budget</th><th class="r">% of Total</th><th class="r">PY</th><th class="r">YoY</th></tr></thead><tbody>';
+  T.jesta_categories.forEach(c => {
+    const isTotal = c.category === 'Total';
+    catTbl += `<tr${isTotal?' style="border-top:2px solid var(--yellow);font-weight:700"':''}>
+      <td class="strong">${c.category}</td>
+      <td class="r strong">${fmtUSD(c.net_sales)}</td>
+      <td class="r muted">${fmtUSD(c.budget)}</td>
+      <td class="r">${deltaHTML(c.var_pct)}</td>
+      <td class="r muted">${c.share.toFixed(1)}%</td>
+      <td class="r muted">${fmtUSD(c.previous_year)}</td>
+      <td class="r">${deltaHTML(c.yoy_pct)}</td>
+    </tr>`;
+  });
+  catTbl += '</tbody></table></div>';
+  html += catTbl;
+
+  // === SECTION 3 — 12-week trends ===
+  html += sectionHeader('03', '12-Week Trends — FY27', 'Net Sales vs Budget · Margin & Markdown · Discount Usage');
+
+  html += `<div class="stack">
+    <div class="panel"><div class="panel-title">Net Sales vs Budget (12 weeks)</div><div class="chart-wrap h-320"><canvas id="chartNetVsBudget"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Margin % · Full Price Share · Markdown Share — Weekly</div><div class="chart-wrap h-320"><canvas id="chartMarginShare"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Discount Usage % of Orders — Weekly</div><div class="chart-wrap h-280"><canvas id="chartDiscUsage"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Conversion Rate · Sessions — Weekly</div><div class="chart-wrap h-300"><canvas id="chartCvrSess"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Category Mix — Weekly Net Sales</div><div class="chart-wrap h-320"><canvas id="chartCatMix"></canvas></div></div>
+  </div>`;
+
+  // === SECTION 4 — Cumulative tracking ===
+  html += sectionHeader('04', 'Cumulative Tracking — Net Sales vs Budget', 'Running total against running budget');
+  html += `<div class="stack">
+    <div class="panel"><div class="panel-title">Cumulative Net Sales vs Cumulative Budget — Weekly</div><div class="chart-wrap h-320"><canvas id="chartCumulative"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Weekly Variance vs Budget %</div><div class="chart-wrap h-280"><canvas id="chartVarPct"></canvas></div></div>
+  </div>`;
+
+  // === SECTION 5 — Forecast ===
+  html += sectionHeader('05', 'Run Rate & W15 Forecast', 'Rank-weighted forecast vs W15 budget');
+
+  const w15_gap = T.forecasted_run_rate - 1500000; // W13 budget CA from forecast sheet
+  const w15_gap_pct = w15_gap / 1500000 * 100;
+  html += `<div class="grid-3">
+    <div class="compare-box now"><div class="compare-label">MTD (Last 4 Weeks)</div><div class="compare-value yellow">${fmtUSDk(T.mtd_total.net_sales)}</div><div class="compare-sub">vs ${fmtUSDk(T.mtd_total.budget)} budget · +${T.mtd_total.var_pct.toFixed(1)}% above</div></div>
+    <div class="compare-box pre"><div class="compare-label">W13 Forecast (Run Rate)</div><div class="compare-value">${fmtUSDk(T.forecasted_run_rate)}</div><div class="compare-sub">Rank-weighted from W6–W14</div></div>
+    <div class="compare-box ${w15_gap >= 0 ? 'now' : 'post'}"><div class="compare-label">W13 vs Budget Gap</div><div class="compare-value">${w15_gap >= 0 ? '+' : ''}${fmtUSDk(w15_gap)}</div><div class="compare-sub">${w15_gap_pct >= 0 ? '+' : ''}${w15_gap_pct.toFixed(1)}% vs W15 budget ${fmtUSDk(1500000)}</div></div>
+  </div>`;
+
+  // === SECTION 5 — Region breakdown ===
+  html += sectionHeader('06', 'Regional Performance — W14', 'Sessions · Conversion · AOV · Net Sales by region');
+
+  let regTbl = '<div class="panel"><div class="panel-title">Regions — W12 vs W11 vs PY</div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Region</th><th class="r">Net Sales</th><th class="r">WoW</th><th class="r">YoY</th><th class="r">Sessions</th><th class="r">Sessions YoY</th><th class="r">CVR</th><th class="r">CVR YoY</th><th class="r">AOV</th><th class="r">AOV YoY</th></tr></thead><tbody>';
+  T.regions.forEach(r => {
+    regTbl += `<tr>
+      <td class="strong">${r.region}</td>
+      <td class="r strong">${fmtUSD(r.net_sales_lw)}</td>
+      <td class="r">${deltaHTML(r.net_sales_wow)}</td>
+      <td class="r">${deltaHTML(r.net_sales_yoy)}</td>
+      <td class="r muted">${fmtNum(r.sessions_lw)}</td>
+      <td class="r">${deltaHTML(r.sessions_yoy)}</td>
+      <td class="r muted">${r.cvr_lw.toFixed(2)}%</td>
+      <td class="r">${deltaHTML(r.cvr_yoy)}</td>
+      <td class="r muted">${fmtUSD(r.aov_lw, 0)}</td>
+      <td class="r">${deltaHTML(r.aov_yoy)}</td>
+    </tr>`;
+  });
+  regTbl += '</tbody></table></div></div>';
+  html += regTbl;
+
+  html += `<div class="grid-2" style="margin-top:16px">
+    <div class="panel"><div class="panel-title">Net Sales by Region — W12</div><div class="chart-wrap h-300"><canvas id="chartRegSales"></canvas></div></div>
+    <div class="panel"><div class="panel-title">Region YoY % (Net Sales)</div><div class="chart-wrap h-300"><canvas id="chartRegYoY"></canvas></div></div>
+  </div>`;
+
+  // Region category mix
+  html += `<div class="panel" style="margin-top:16px"><div class="panel-title">Category Share by Region — W12</div><div class="chart-wrap h-280"><canvas id="chartRegCat"></canvas></div></div>`;
+
+  // === SECTION 6 — Province detail ===
+  html += sectionHeader('07', 'Province Detail — W14', 'Sessions, CVR, AOV, Net Sales by province');
+
+  // Sort provinces by net sales desc using province_sales
+  const provSales = [...T.province_sales].sort((a,b) => b.net_sales - a.net_sales);
+  let provTbl = '<div class="panel"><div class="panel-title">Provinces — W12 (sorted by Net Sales)</div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Province</th><th>Region</th><th class="r">Net Sales</th><th class="r">Orders</th><th class="r">AOV</th><th class="r">AOV PY</th><th class="r">AOV YoY</th><th class="r">Discounts</th></tr></thead><tbody>';
+  provSales.forEach(p => {
+    const aov_yoy = p.aov_py > 0 ? (p.aov - p.aov_py) / p.aov_py * 100 : null;
+    provTbl += `<tr>
+      <td class="strong">${p.province}</td>
+      <td class="muted">${p.region}</td>
+      <td class="r strong">${fmtUSD(p.net_sales)}</td>
+      <td class="r">${fmtNum(p.orders)}</td>
+      <td class="r">${fmtUSD(p.aov, 2)}</td>
+      <td class="r muted">${fmtUSD(p.aov_py, 2)}</td>
+      <td class="r">${deltaHTML(aov_yoy)}</td>
+      <td class="r muted">${fmtUSD(Math.abs(p.discounts))}</td>
+    </tr>`;
+  });
+  provTbl += '</tbody></table></div></div>';
+  html += provTbl;
+
+  // Province CVR detail
+  html += `<div class="panel" style="margin-top:16px"><div class="panel-title">Province CVR — W12 vs PY (Sessions ≥ 1k)</div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Province</th><th class="r">Sessions LW</th><th class="r">Sessions PY</th><th class="r">Sessions YoY</th><th class="r">CVR LW</th><th class="r">CVR PY</th><th class="r">CVR YoY</th></tr></thead><tbody>`;
+  T.provinces.filter(p => p.sessions_lw >= 1000).sort((a,b) => b.sessions_lw - a.sessions_lw).forEach(p => {
+    html += `<tr>
+      <td class="strong">${p.province}</td>
+      <td class="r">${fmtNum(p.sessions_lw)}</td>
+      <td class="r muted">${fmtNum(p.sessions_py)}</td>
+      <td class="r">${deltaHTML(p.sessions_yoy)}</td>
+      <td class="r">${p.cvr_lw.toFixed(2)}%</td>
+      <td class="r muted">${p.cvr_py.toFixed(2)}%</td>
+      <td class="r">${deltaHTML(p.cvr_yoy)}</td>
+    </tr>`;
+  });
+  html += '</tbody></table></div></div>';
+
+  // === WSW Block ===
+  html += wswBlock(
+    `Net Sales (JESTA) $1.40M — second consecutive sub-budget week at -4.9% (after W13 -4.0%). WoW essentially flat (+0.5%). Margin recovered further to 39.1% (+0.8 pts WoW, +2.3 pts since W11 low of 36.8%). Full Price share at 48% — matches the 48.4% target for the first time in FY27. Discount Usage rate fell to 13.6% (-0.3 pts WoW, second consecutive decline). Footwear $1.19M, +0.4% WoW, +45.3% YoY (85.0% of mix). Apparel $174k +1.8% WoW but still -25% under budget. BC -1.7% YoY — first negative regional YoY of FY27. MTD on a 4-week stack (W11-W14): $5.69M vs $5.24M budget = +8.6% above budget.`,
+    `The margin and price-discipline story is now genuinely good — three weeks of consecutive margin improvement, Full Price share back at target, discount-usage rate cooling. Net Sales softness has continued but the economics underneath have strengthened. The apparel underperformance is now a sustained three-week pattern (-25% under budget in W14) — not noise, structural. BC turning negative YoY is a regional concern worth investigating: BC sessions YoY were positive in W12-W13, the W14 -1.7% suggests a local issue. Quebec & Atlantic remains the bright spot (+41.4% YoY, 2.04% CVR). W15 budget at $1.50M is the highest FY27 weekly budget; rank-weighted forecast of $1.35M would land us ~10% under.`,
+    `(1) Apparel diagnosis is now urgent — three weeks of underperformance. SKU-level sell-through audit pre next trade meeting. (2) BC investigation — first negative regional YoY of FY27; verify whether paid spend allocation, traffic mix, or a local trading issue. (3) Credit the margin recovery and Full Price target hit in the trade meeting narrative — direction of travel on price discipline is positive across three consecutive weeks. (4) W15 budget at $1.50M (highest of FY27) — set expectations now that the forecast says we miss by ~10%, identify acquisition levers. (5) The discount-usage drop suggests the W12 spike was an isolated event — recommend dropping the code-level audit from the watch list.`
+  );
+
+  return html;
+}
+
+function renderTradeMeetingCharts() {
+  const T = TRADE;
+
+  // Cat budget vs actual
+  const cbe = document.getElementById('chartCatBudget');
+  if (cbe) {
+    const cats = T.jesta_categories.filter(c => c.category !== 'Total');
+    chartInstances.catBudget = new Chart(cbe, {
+      type:'bar',
+      data:{
+        labels: cats.map(c=>c.category),
+        datasets:[
+          {label:'Budget', data:cats.map(c=>c.budget), backgroundColor:'#52525b', borderRadius:2},
+          {label:'W12 Actual', data:cats.map(c=>c.net_sales), backgroundColor:YELLOW, borderRadius:2},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtUSDk(ctx.raw)}}}
+      }
+    });
+  }
+
+  // Cat YoY
+  const cye = document.getElementById('chartCatYoY');
+  if (cye) {
+    const cats = T.jesta_categories.filter(c => c.category !== 'Total');
+    chartInstances.catYoY = new Chart(cye, {
+      type:'bar',
+      data:{
+        labels: cats.map(c=>c.category),
+        datasets:[{label:'YoY %', data: cats.map(c=>c.yoy_pct), backgroundColor: cats.map(c=>c.yoy_pct>=0?GREEN:RED), borderRadius:2}]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}}},
+        plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>'YoY: '+ctx.raw.toFixed(1)+'%'}}}
+      }
+    });
+  }
+
+  // Net vs Budget weekly
+  const nbe = document.getElementById('chartNetVsBudget');
+  if (nbe) {
+    chartInstances.netBudget = new Chart(nbe, {
+      type:'bar',
+      data:{
+        labels: T.trends.map(w => w.week),
+        datasets:[
+          {label:'Budget', data:T.trends.map(w=>w.budget_ca), backgroundColor:'#3f3f46', borderRadius:2, order:2},
+          {label:'Net Sales', data:T.trends.map(w=>w.net_sales), backgroundColor:YELLOW, borderRadius:2, order:1},
+          {label:'vs Budget %', data:T.trends.map(w=>w.var_pct_ca), type:'line', yAxisID:'y2', borderColor:GREEN, backgroundColor:GREEN, tension:0.2, pointRadius:3, order:0},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{
+          x:{grid:gridConfig, ticks:tickConfig},
+          y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}},
+          y2:{position:'right', grid:{display:false}, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}}
+        },
+        plugins:{
+          tooltip:{callbacks:{label:ctx=>{const v=ctx.raw; if(ctx.dataset.label==='vs Budget %') return ctx.dataset.label+': '+v.toFixed(1)+'%'; return ctx.dataset.label+': '+fmtUSDk(v)}}}
+        }
+      }
+    });
+  }
+
+  // Margin & full price / markdown share — with Full Price Target reference line
+  const mse = document.getElementById('chartMarginShare');
+  if (mse) {
+    const fpTarget2 = T.full_price_target;
+    chartInstances.marginShare = new Chart(mse, {
+      type:'line',
+      data:{
+        labels: T.trends.map(w=>w.week),
+        datasets:[
+          {label:'Margin %', data:T.trends.map(w=>w.margin_pct), borderColor:YELLOW, backgroundColor:YELLOW, tension:0.2, pointRadius:3, borderWidth:2.5},
+          {label:'Full Price Share', data:T.trends.map(w=>w.full_price_share), borderColor:GREEN, backgroundColor:GREEN, tension:0.2, pointRadius:3},
+          {label:'Full Price Target', data:T.trends.map(_=>fpTarget2), borderColor:GREEN, backgroundColor:'transparent', borderDash:[3,3], borderWidth:1.5, pointRadius:0, fill:false},
+          {label:'Markdown Share', data:T.trends.map(w=>w.markdown_share), borderColor:RED, backgroundColor:RED, tension:0.2, pointRadius:3, borderDash:[4,4]},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.raw.toFixed(1)+'%'}}}
+      }
+    });
+  }
+
+  // Discount usage
+  const due = document.getElementById('chartDiscUsage');
+  if (due) {
+    chartInstances.discUsage = new Chart(due, {
+      type:'line',
+      data:{
+        labels: T.trends.map(w=>w.week),
+        datasets:[
+          {label:'Discount Usage % Orders', data:T.trends.map(w=>w.discount_usage_pct), borderColor:YELLOW, backgroundColor:YELLOW, tension:0.2, pointRadius:3, borderWidth:2.5, fill:false},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.raw.toFixed(2)+'%'}}}
+      }
+    });
+  }
+
+  // CVR + Sessions
+  const cse = document.getElementById('chartCvrSess');
+  if (cse) {
+    chartInstances.cvrSess = new Chart(cse, {
+      type:'line',
+      data:{
+        labels: T.trends.map(w=>w.week),
+        datasets:[
+          {label:'CVR %', data:T.trends.map(w=>w.cvr), borderColor:YELLOW, backgroundColor:YELLOW, tension:0.2, pointRadius:3, borderWidth:2.5, yAxisID:'y'},
+          {label:'Sessions', data:T.trends.map(w=>w.sessions), borderColor:BLUE, backgroundColor:BLUE, tension:0.2, pointRadius:3, yAxisID:'y2'},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{
+          x:{grid:gridConfig, ticks:tickConfig},
+          y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(2)+'%'}},
+          y2:{position:'right', grid:{display:false}, ticks:{...tickConfig, callback:v=>fmtNum(v)}}
+        },
+        plugins:{tooltip:{callbacks:{label:ctx=>{const v=ctx.raw; if(ctx.dataset.label==='CVR %') return ctx.dataset.label+': '+v.toFixed(2)+'%'; return ctx.dataset.label+': '+fmtNum(v)}}}}
+      }
+    });
+  }
+
+  // Category mix stacked weekly
+  const cme = document.getElementById('chartCatMix');
+  if (cme) {
+    chartInstances.catMix = new Chart(cme, {
+      type:'bar',
+      data:{
+        labels: T.trends.map(w=>w.week),
+        datasets:[
+          {label:'Footwear', data:T.trends.map(w=>w.footwear), backgroundColor:YELLOW, stack:'s'},
+          {label:'Apparel', data:T.trends.map(w=>w.apparel), backgroundColor:'#fbbf24', stack:'s'},
+          {label:'Accessories', data:T.trends.map(w=>w.accessories), backgroundColor:'#a16207', stack:'s'},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig, stacked:true}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}, stacked:true}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtUSDk(ctx.raw)}}}
+      }
+    });
+  }
+
+  // Cumulative Net Sales vs Budget
+  const cue = document.getElementById('chartCumulative');
+  if (cue) {
+    let cumNet = 0, cumBudget = 0;
+    const cumNetData = [], cumBudgetData = [];
+    T.trends.forEach(w => {
+      cumNet += w.net_sales || 0;
+      cumBudget += w.budget_ca || 0;
+      cumNetData.push(cumNet);
+      cumBudgetData.push(cumBudget);
+    });
+    chartInstances.cumulative = new Chart(cue, {
+      type:'line',
+      data:{
+        labels: T.trends.map(w=>w.week),
+        datasets:[
+          {label:'Cumulative Budget', data:cumBudgetData, borderColor:'#a1a1aa', backgroundColor:'rgba(161,161,170,0.12)', tension:0.15, pointRadius:3, borderDash:[5,3], fill:true},
+          {label:'Cumulative Net Sales', data:cumNetData, borderColor:YELLOW, backgroundColor:'rgba(255,224,0,0.12)', tension:0.15, pointRadius:3, borderWidth:2.5, fill:true},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>'$'+(v/1000000).toFixed(1)+'M'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtUSDk(ctx.raw)}}}
+      }
+    });
+  }
+
+  // Variance % bar chart
+  const ve = document.getElementById('chartVarPct');
+  if (ve) {
+    chartInstances.varPct = new Chart(ve, {
+      type:'bar',
+      data:{
+        labels: T.trends.map(w=>w.week),
+        datasets:[{label:'vs Budget %', data: T.trends.map(w=>w.var_pct_ca), backgroundColor: T.trends.map(w=>(w.var_pct_ca||0)>=0?GREEN:RED), borderRadius:2}]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}}},
+        plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>'vs Budget: '+ctx.raw.toFixed(1)+'%'}}}
+      }
+    });
+  }
+
+  // Region net sales
+  const rse = document.getElementById('chartRegSales');
+  if (rse) {
+    const sortedReg = [...T.regions].sort((a,b) => b.net_sales_lw - a.net_sales_lw);
+    chartInstances.regSales = new Chart(rse, {
+      type:'bar',
+      data:{
+        labels: sortedReg.map(r=>r.region),
+        datasets:[
+          {label:'W11 (PW)', data:sortedReg.map(r=>r.net_sales_pw), backgroundColor:'#52525b', borderRadius:2},
+          {label:'W12 (LW)', data:sortedReg.map(r=>r.net_sales_lw), backgroundColor:YELLOW, borderRadius:2},
+        ]
+      },
+      options:{
+        indexAxis:'y', responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}}, y:{grid:gridConfig, ticks:{...tickConfig, color:'#e4e4e7'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtUSDk(ctx.raw)}}}
+      }
+    });
+  }
+
+  // Region YoY
+  const rye = document.getElementById('chartRegYoY');
+  if (rye) {
+    const sortedReg = [...T.regions].sort((a,b) => b.net_sales_yoy - a.net_sales_yoy);
+    chartInstances.regYoY = new Chart(rye, {
+      type:'bar',
+      data:{
+        labels: sortedReg.map(r=>r.region),
+        datasets:[{label:'YoY %', data: sortedReg.map(r=>r.net_sales_yoy), backgroundColor: sortedReg.map(r=>r.net_sales_yoy>=0?GREEN:RED), borderRadius:2}]
+      },
+      options:{
+        indexAxis:'y', responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(0)+'%'}}, y:{grid:gridConfig, ticks:{...tickConfig, color:'#e4e4e7'}}},
+        plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>'YoY: '+ctx.raw.toFixed(1)+'%'}}}
+      }
+    });
+  }
+
+  // Region category share
+  const rce = document.getElementById('chartRegCat');
+  if (rce) {
+    chartInstances.regCat = new Chart(rce, {
+      type:'bar',
+      data:{
+        labels: T.regions.map(r=>r.region),
+        datasets:[
+          {label:'Footwear', data:T.regions.map(r=>r.footwear_lw), backgroundColor:YELLOW, stack:'s'},
+          {label:'Apparel', data:T.regions.map(r=>r.apparel_lw), backgroundColor:'#fbbf24', stack:'s'},
+          {label:'Accessories', data:T.regions.map(r=>r.accessories_lw), backgroundColor:'#a16207', stack:'s'},
+        ]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig, stacked:true}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>'$'+(v/1000).toFixed(0)+'k'}, stacked:true}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtUSDk(ctx.raw)}}}
+      }
+    });
+  }
+}
+
+
+
+function buildLandingPages() {
+  const M = LP.meta;
+  const Y = LP.yoy_totals;
+  let html = '';
+
+  // Coverage note
+  html += `<div class="stale-banner" style="background:linear-gradient(90deg,rgba(96,165,250,0.08),rgba(96,165,250,0.02));border-color:rgba(96,165,250,0.3);border-left-color:var(--blue)"><div class="stale-banner-icon" style="background:var(--blue)">SCOPE</div><div class="stale-banner-text"><strong>${M.note}</strong> ${fmtNum(M.total_pages)} unique PDPs · ${fmtNum(M.total_sessions_lw)} LW sessions tracked (~57% of total Shopify sessions — collections/homepage not in this export).</div></div>`;
+
+  // === Section 01 — Topline KPIs ===
+  html += sectionHeader('01', 'PDP Performance — W18 (May 3 – May 9)', 'Product page sessions, conversion, and movers vs prior week');
+
+  html += `<div class="kpi-grid">
+    <div class="kpi-card"><div class="kpi-label">PDP Sessions (LW)</div>
+      <div class="kpi-value">${fmtNum(M.total_sessions_lw)}</div>
+      <div class="kpi-deltas"><div><span class="delta-label">WoW</span>${deltaHTML(pctDelta(M.total_sessions_lw, M.total_sessions_pw))}</div></div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">PDP Blended CVR</div>
+      <div class="kpi-value">${M.cvr_lw.toFixed(2)}%</div>
+      <div class="kpi-deltas"><div><span class="delta-label">WoW</span>${deltaPtsHTML(M.cvr_lw - M.cvr_pw)}</div></div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">Completed Checkouts</div>
+      <div class="kpi-value">${fmtNum(M.total_comp_lw)}</div>
+      <div class="kpi-deltas"><div><span class="delta-label">From PDPs</span><span class="delta neutral">${M.cvr_lw.toFixed(2)}% conv</span></div></div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">Unique PDPs</div>
+      <div class="kpi-value">${fmtNum(M.total_pages)}</div>
+      <div class="kpi-deltas"><div><span class="delta-label">Long tail</span><span class="delta neutral">All product pages</span></div></div>
+    </div>
+  </div>`;
+
+  // === Section 02 — Weekly Trend ===
+  html += sectionHeader('02', 'Weekly PDP Trend', 'Sessions, completed checkouts, blended CVR — full weeks only');
+  html += `<div class="grid-2">
+    <div class="panel"><div class="panel-title">PDP Sessions vs Completed Checkouts</div><div class="chart-wrap h-280"><canvas id="chartLPVolume"></canvas></div></div>
+    <div class="panel"><div class="panel-title">PDP Funnel Rates — Weekly</div><div class="chart-wrap h-280"><canvas id="chartLPRates"></canvas></div></div>
+  </div>`;
+
+  // === Section 03 — Top 25 PDPs ===
+  html += sectionHeader('03', 'Top 25 PDPs by Sessions — W18', 'Sorted by W18 sessions, with WoW delta and CVR');
+  let tbl = '<div class="panel"><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Page</th><th class="r">Sessions LW</th><th class="r">WoW</th><th class="r">CVR LW</th><th class="r">CVR PW</th><th class="r">ATC%</th><th class="r">Comp.</th></tr></thead><tbody>';
+  LP.top_pages.forEach(p => {
+    tbl += `<tr>
+      <td style="font-size:11px"><span style="color:#a1a1aa">${p.path}</span></td>
+      <td class="r strong">${fmtNum(p.sessions_lw)}</td>
+      <td class="r">${deltaHTML(p.sessions_wow)}</td>
+      <td class="r">${p.cvr_lw.toFixed(2)}%</td>
+      <td class="r muted">${p.cvr_pw.toFixed(2)}%</td>
+      <td class="r muted">${p.atc_rate_lw.toFixed(1)}%</td>
+      <td class="r muted">${fmtNum(p.comp_lw)}</td>
+    </tr>`;
+  });
+  tbl += '</tbody></table></div></div>';
+  html += tbl;
+
+  // === Section 04 — Movers ===
+  html += sectionHeader('04', 'Top Gainers and Decliners — W18 vs W17', 'PDPs with the biggest WoW session changes (min 500 sessions either week)');
+  html += `<div class="grid-2">
+    <div class="panel"><div class="panel-title">Top 10 Gainers (sessions)</div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Page</th><th class="r">LW</th><th class="r">PW</th><th class="r">Δ</th><th class="r">CVR</th></tr></thead><tbody>${LP.gainers.map(p => `<tr><td style="font-size:11px"><span style="color:#a1a1aa">${p.path}</span></td><td class="r">${fmtNum(p.sessions_lw)}</td><td class="r muted">${fmtNum(p.sessions_pw)}</td><td class="r strong">${deltaHTML(p.delta>=0?100:-100).replace('100.0%','+'+fmtNum(p.delta)).replace('-100.0%',fmtNum(p.delta))}</td><td class="r muted">${p.cvr_lw.toFixed(2)}%</td></tr>`).join('')}</tbody></table></div></div>
+    <div class="panel"><div class="panel-title">Top 10 Decliners (sessions)</div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Page</th><th class="r">LW</th><th class="r">PW</th><th class="r">Δ</th><th class="r">CVR</th></tr></thead><tbody>${LP.decliners.map(p => `<tr><td style="font-size:11px"><span style="color:#a1a1aa">${p.path}</span></td><td class="r">${fmtNum(p.sessions_lw)}</td><td class="r muted">${fmtNum(p.sessions_pw)}</td><td class="r strong">${deltaHTML(p.delta>=0?100:-100).replace('100.0%','+'+fmtNum(p.delta)).replace('-100.0%',fmtNum(p.delta))}</td><td class="r muted">${p.cvr_lw.toFixed(2)}%</td></tr>`).join('')}</tbody></table></div></div>
+  </div>`;
+
+  // === Section 05 — Conversion leaders & laggards ===
+  html += sectionHeader('05', 'Conversion Leaders & Laggards — W18', 'CVR among high-traffic PDPs (≥1k sessions LW)');
+  html += `<div class="grid-2">
+    <div class="panel"><div class="panel-title">Top 15 CVR (Sessions ≥1k)</div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Page</th><th class="r">Sessions</th><th class="r">CVR</th><th class="r">ATC%</th><th class="r">Comp.</th></tr></thead><tbody>${LP.top_cvr.map(p => `<tr><td style="font-size:11px"><span style="color:#a1a1aa">${p.path}</span></td><td class="r">${fmtNum(p.sessions_lw)}</td><td class="r strong" style="color:var(--green)">${p.cvr_lw.toFixed(2)}%</td><td class="r muted">${p.atc_rate_lw.toFixed(1)}%</td><td class="r muted">${fmtNum(p.comp_lw)}</td></tr>`).join('')}</tbody></table></div></div>
+    <div class="panel"><div class="panel-title">Bottom 15 CVR (Sessions ≥2k)</div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Page</th><th class="r">Sessions</th><th class="r">CVR</th><th class="r">ATC%</th><th class="r">Comp.</th></tr></thead><tbody>${LP.bottom_cvr.map(p => `<tr><td style="font-size:11px"><span style="color:#a1a1aa">${p.path}</span></td><td class="r">${fmtNum(p.sessions_lw)}</td><td class="r strong" style="color:var(--red)">${p.cvr_lw.toFixed(2)}%</td><td class="r muted">${p.atc_rate_lw.toFixed(1)}%</td><td class="r muted">${fmtNum(p.comp_lw)}</td></tr>`).join('')}</tbody></table></div></div>
+  </div>`;
+
+  // === Section 06 — Brand-level ===
+  html += sectionHeader('06', 'Brand-Level PDP Performance — W18 vs W17', 'PDP sessions and conversion grouped by brand');
+  let brandTbl = '<div class="panel"><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Brand</th><th class="r">Sessions LW</th><th class="r">Sessions PW</th><th class="r">WoW</th><th class="r">CVR LW</th><th class="r">CVR PW</th><th class="r">Comp.</th></tr></thead><tbody>';
+  LP.brands.forEach(b => {
+    brandTbl += `<tr>
+      <td class="strong">${b.brand}</td>
+      <td class="r strong">${fmtNum(b.sessions_lw)}</td>
+      <td class="r muted">${fmtNum(b.sessions_pw)}</td>
+      <td class="r">${deltaHTML(b.sessions_wow)}</td>
+      <td class="r">${b.cvr_lw.toFixed(2)}%</td>
+      <td class="r muted">${b.cvr_pw.toFixed(2)}%</td>
+      <td class="r muted">${fmtNum(b.comp_lw)}</td>
+    </tr>`;
+  });
+  brandTbl += '</tbody></table></div></div>';
+  html += brandTbl;
+
+  // === Section 07 — YoY VIEW (NEW) ===
+  html += sectionHeader('07', 'YoY Comparison — W18 (May 3-9) vs PY (May 4-10, 2025)', 'Landing page traffic, conversion, and brand mix year-on-year');
+
+  const LW_T = Y.LW; const PY_T = Y.PY;
+  const sessions_yoy = (LW_T.sessions - PY_T.sessions) / PY_T.sessions * 100;
+  const comp_yoy = (LW_T.comp - PY_T.comp) / PY_T.comp * 100;
+  const cvr_diff = LW_T.cvr - PY_T.cvr;
+
+  html += `<div class="kpi-grid">
+    <div class="kpi-card"><div class="kpi-label">PDP Sessions YoY</div>
+      <div class="kpi-value">${fmtNum(LW_T.sessions)}</div>
+      <div class="kpi-deltas"><div><span class="delta-label">vs PY</span>${deltaHTML(sessions_yoy)}</div></div>
+      <div class="kpi-target">PY: ${fmtNum(PY_T.sessions)}</div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">Completed CO YoY</div>
+      <div class="kpi-value">${fmtNum(LW_T.comp)}</div>
+      <div class="kpi-deltas"><div><span class="delta-label">vs PY</span>${deltaHTML(comp_yoy)}</div></div>
+      <div class="kpi-target">PY: ${fmtNum(PY_T.comp)}</div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">PDP CVR YoY</div>
+      <div class="kpi-value">${LW_T.cvr.toFixed(2)}%</div>
+      <div class="kpi-deltas"><div><span class="delta-label">vs PY</span>${deltaPtsHTML(cvr_diff)}</div></div>
+      <div class="kpi-target">PY: ${PY_T.cvr.toFixed(2)}%</div>
+    </div>
+    <div class="kpi-card"><div class="kpi-label">PDPs in Use YoY</div>
+      <div class="kpi-value">${fmtNum(LW_T.unique_pages)}</div>
+      <div class="kpi-deltas"><div><span class="delta-label">vs PY</span>${deltaHTML(pctDelta(LW_T.unique_pages, PY_T.unique_pages))}</div></div>
+      <div class="kpi-target">PY: ${fmtNum(PY_T.unique_pages)}</div>
+    </div>
+  </div>`;
+
+  // Weekly trend with PY overlay
+  html += `<div class="panel" style="margin-top:16px"><div class="panel-title">Weekly PDP Sessions vs PY (52w-matched)</div><div class="chart-wrap h-300"><canvas id="chartLPSessionsYoY"></canvas></div></div>`;
+
+  // Brand YoY
+  html += `<div class="panel" style="margin-top:16px"><div class="panel-title">Brand-Level YoY (W18 vs W18 PY)</div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Brand</th><th class="r">Sessions LW</th><th class="r">Sessions PY</th><th class="r">YoY</th><th class="r">CVR LW</th><th class="r">CVR PY</th><th class="r">Comp YoY</th></tr></thead><tbody>`;
+  LP.brands_yoy.forEach(b => {
+    html += `<tr>
+      <td class="strong">${b.brand}</td>
+      <td class="r strong">${fmtNum(b.sessions_lw)}</td>
+      <td class="r muted">${fmtNum(b.sessions_py)}</td>
+      <td class="r">${deltaHTML(b.sessions_yoy)}</td>
+      <td class="r">${b.cvr_lw.toFixed(2)}%</td>
+      <td class="r muted">${b.cvr_py.toFixed(2)}%</td>
+      <td class="r">${deltaHTML(b.comp_yoy)}</td>
+    </tr>`;
+  });
+  html += '</tbody></table></div></div>';
+
+  // === WSW ===
+  html += wswBlock(
+    `${fmtNum(M.total_sessions_lw)} PDP sessions in W18, blended CVR ${M.cvr_lw.toFixed(2)}% (vs ${M.cvr_pw.toFixed(2)}% W17). YoY: PDP sessions +${sessions_yoy.toFixed(1)}%, completed checkouts +${comp_yoy.toFixed(1)}%, CVR ${cvr_diff>=0?'+':''}${cvr_diff.toFixed(2)} pts. Brand YoY highlights — Hoka +501%, Salomon +382%, Adidas +87%, Asics +37%, Jordan +34%. Nike only +12% YoY (largest by absolute volume but slowest growing). Top PDPs by sessions in W18 include the usual leading SKUs; conversion laggards (sub-0.3% CVR with thousands of sessions) remain a real issue worth diagnosing.`,
+    `The brand YoY view is the most important new finding. Hoka, Salomon, and Adidas have grown PDP traffic dramatically year-on-year (+87% to +501%) — these are the brands carrying the FY27 +33% PDP-session YoY growth. Nike at only +12% is significant because it remains the largest brand by absolute volume but the slowest-growing — suggests the JD-Nike strategic conversation could focus on whether Nike spend should index to match the category growth, or whether JD is correctly reallocating focus to faster-growing partners (Hoka, Salomon, On). CVR YoY change is small (+0.03 pts blended), so the YoY revenue growth is overwhelmingly session-driven, not conversion-driven — same finding as the eCom YoY data.`,
+    `(1) Bring the Hoka, Salomon, Adidas YoY-growth story to brand co-op conversations — these partners are working hardest on traffic. (2) Nike growth-lag investigation: is this strategic deprioritisation, a Nike-side product/pricing issue, or a competitor share-shift? Worth flagging to the Nike account team. (3) The conversion-laggard PDPs (zombie SKUs sub-0.3% CVR with thousands of weekly sessions) remain the largest unforced error in the PDP funnel — paid spend reallocation should be straightforward. (4) Drill the long-tail: 75k unique PDPs YoY (vs 60k PY +25%) means more product depth on site, but blended CVR has held flat — the long-tail itself isn't degrading conversion, so depth strategy is working.`
+  );
+
+  return html;
+}
+
+function renderLandingPagesCharts() {
+  // Weekly volume — sessions and comp
+  const cv = document.getElementById('chartLPVolume');
+  if (cv) {
+    chartInstances.lpVolume = new Chart(cv, {
+      data: {
+        labels: LP.weekly.map(w => w.week),
+        datasets: [
+          {type:'bar', label:'Sessions', data: LP.weekly.map(w => w.sessions), backgroundColor: 'rgba(255,224,0,0.6)', yAxisID: 'y', order: 2},
+          {type:'line', label:'Completed Checkouts', data: LP.weekly.map(w => w.comp), borderColor: YELLOW, backgroundColor: YELLOW, yAxisID: 'y2', tension: 0.2, pointRadius: 3, borderWidth: 2.5},
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        scales: {
+          x:{grid:gridConfig, ticks:tickConfig},
+          y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>(v/1000).toFixed(0)+'k'}, position:'left'},
+          y2:{grid:{display:false}, ticks:{...tickConfig, callback:v=>fmtNum(v)}, position:'right'}
+        },
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtNum(ctx.raw)}}}
+      }
+    });
+  }
+  // Funnel rates
+  const cr = document.getElementById('chartLPRates');
+  if (cr) {
+    chartInstances.lpRates = new Chart(cr, {
+      type: 'line',
+      data: {
+        labels: LP.weekly.map(w => w.week),
+        datasets: [
+          {label:'CVR', data: LP.weekly.map(w => w.cvr), borderColor: YELLOW, backgroundColor: YELLOW, tension: 0.2, pointRadius: 3, borderWidth: 2.5},
+          {label:'ATC Rate', data: LP.weekly.map(w => w.atc_rate), borderColor: BLUE, backgroundColor: BLUE, tension: 0.2, pointRadius: 3},
+          {label:'Reach Rate', data: LP.weekly.map(w => w.reach_rate), borderColor: GREEN, backgroundColor: GREEN, tension: 0.2, pointRadius: 3, borderDash:[3,3]},
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>v.toFixed(1)+'%'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.raw.toFixed(2)+'%'}}}
+      }
+    });
+  }
+  // Weekly sessions YoY
+  const cy = document.getElementById('chartLPSessionsYoY');
+  if (cy) {
+    chartInstances.lpSessYoY = new Chart(cy, {
+      type: 'line',
+      data: {
+        labels: LP.weekly_yoy.map(w => w.week),
+        datasets: [
+          {label:'Sessions LW', data: LP.weekly_yoy.map(w => w.sessions), borderColor: YELLOW, backgroundColor: YELLOW, tension: 0.2, pointRadius: 3, borderWidth: 2.5},
+          {label:'Sessions PY (52w match)', data: LP.weekly_yoy.map(w => w.sessions_py), borderColor: '#a1a1aa', backgroundColor: '#a1a1aa', tension: 0.2, pointRadius: 3, borderDash:[4,4]},
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        scales:{x:{grid:gridConfig, ticks:tickConfig}, y:{grid:gridConfig, ticks:{...tickConfig, callback:v=>(v/1000).toFixed(0)+'k'}}},
+        plugins:{tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+fmtNum(ctx.raw)}}}
+      }
+    });
+  }
+}
+
+
+function activateTab(name) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t.dataset.tab===name));
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.toggle('active', t.id==='tab-'+name));
+  destroyCharts();
+  if (name==='overview') renderOverviewCharts();
+  else if (name==='funnel') renderFunnelCharts();
+  else if (name==='channels') renderChannelCharts();
+  else if (name==='discounts') renderDiscountCharts();
+  else if (name==='products') renderProductCharts();
+  else if (name==='trade') renderTradeMeetingCharts();
+  else if (name==='landing') renderLandingPagesCharts();
+}
+
+document.getElementById('tab-overview').innerHTML = buildOverview();
+document.getElementById('tab-funnel').innerHTML = buildFunnel();
+document.getElementById('tab-channels').innerHTML = buildChannels();
+document.getElementById('tab-discounts').innerHTML = buildDiscounts();
+document.getElementById('tab-products').innerHTML = buildProducts();
+document.getElementById('tab-trade').innerHTML = buildTradeMeeting();
+document.getElementById('tab-landing').innerHTML = buildLandingPages();
+
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => activateTab(t.dataset.tab)));
+activateTab('overview');
+</script>
+</body>
+</html>
